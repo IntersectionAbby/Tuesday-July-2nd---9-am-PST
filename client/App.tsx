@@ -1,11 +1,8 @@
-import "./global.css";
-
-import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-const App = () => (
+export const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Index />} />
@@ -15,4 +12,4 @@ const App = () => (
   </BrowserRouter>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+export default App;
