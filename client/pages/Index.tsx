@@ -536,7 +536,7 @@ export default function Index() {
                   Join live
                 </p>
                 <h2 className="serif mt-4 text-3xl md:text-4xl font-semibold text-text leading-tight">
-                  Be in the room while the context is fresh.
+                  Be in the room while the analysis is still fresh.
                 </h2>
                 <p className="mt-4 text-base text-text/68 leading-relaxed">
                   If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on June 4.
