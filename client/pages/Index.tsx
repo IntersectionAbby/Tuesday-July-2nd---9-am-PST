@@ -136,7 +136,7 @@ export default function Index() {
 
                 {/* Lede */}
                 <p className="mt-6 max-w-2xl text-lg md:text-xl text-text/76 leading-relaxed">
-                  A live conversation on how I built a $120M private-company position, what I look for before a deal is obvious, and why the best context rarely shows up in a recording.
+                  This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.
                 </p>
 
                 {/* CTAs */}
@@ -193,7 +193,7 @@ export default function Index() {
                     <div className="bg-ink/24 p-6">
                       <span className="text-xs font-black uppercase tracking-widest text-gold-2">Format</span>
                       <strong className="serif mt-2 block text-xl md:text-2xl text-text leading-tight">
-                        Never recorded
+                        LIVE. (no recording)
                       </strong>
                     </div>
                     <div className="bg-ink/24 p-6">
