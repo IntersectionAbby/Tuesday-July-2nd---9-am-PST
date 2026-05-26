@@ -158,11 +158,14 @@ export default function Index() {
                 {/* Invite note */}
                 <div className="mt-6 max-w-2xl border-l-2 border-gold bg-gradient-to-r from-gold/14 to-gold/2 p-5 md:p-6">
                   <strong className="block text-sm font-black uppercase tracking-wider text-text">
-                    Come for the thinking, not a pitch deck.
+                    This webinar is for:
                   </strong>
-                  <span className="mt-1 block text-sm text-text/62 leading-relaxed">
-                    We'll talk through sourcing, diligence, and one current opportunity while the context is still fresh.
-                  </span>
+                  <ul className="mt-4 space-y-2 text-sm text-text/62 leading-relaxed">
+                    <li>Investors looking to find private-market deals</li>
+                    <li>Operators and founders deploying personal capital&nbsp;</li>
+                    <li>Private Equity professionals</li>
+                    <li>People who want a repeatable evaluation framework — not stock tips</li>
+                  </ul>
                 </div>
 
                 {/* Private room panel */}
@@ -287,7 +290,7 @@ export default function Index() {
                   A few things we'll touch
                 </p>
                 <h2 className="serif mt-4 max-w-2xl text-4xl md:text-5xl lg:text-6xl font-semibold text-dark-text leading-tight">
-                  The work behind finding private-company winners.
+                  This is how I share my work with 400+ current investors&nbsp;
                 </h2>
               </div>
             </div>
@@ -439,7 +442,7 @@ export default function Index() {
                   The approach
                 </p>
                 <h2 className="serif mt-4 text-4xl md:text-5xl font-semibold text-text leading-tight">
-                  Real companies, real operators, real diligence.
+                  Learn the process 400+ investors used to invest $50 million
                 </h2>
                 <p className="mt-6 max-w-xl text-base text-text/68 leading-relaxed">
                   The focus is on businesses with tangible demand, capable teams, and a reason to believe value can compound before the broader market notices.
