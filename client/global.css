@@ -125,8 +125,181 @@
     }
   }
 
+  @keyframes heroGlowPulse {
+    0%,
+    100% {
+      opacity: 0.32;
+      transform: scale(1) translate(0, 0);
+    }
+    50% {
+      opacity: 0.72;
+      transform: scale(1.12) translate(2%, -2%);
+    }
+  }
+
+  @keyframes heroGlowPulseAlt {
+    0%,
+    100% {
+      opacity: 0.28;
+      transform: scale(1) translate(0, 0);
+    }
+    50% {
+      opacity: 0.58;
+      transform: scale(1.1) translate(-3%, 2%);
+    }
+  }
+
+  @keyframes heroLedeGlow {
+    0%,
+    100% {
+      opacity: 0.72;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+  }
+
+  .hero-lede-glow {
+    border-radius: 1.25rem;
+    background: radial-gradient(
+      ellipse 88% 85% at 8% 50%,
+      rgba(234, 215, 173, 0.34) 0%,
+      rgba(198, 163, 106, 0.16) 44%,
+      transparent 72%
+    );
+    filter: blur(20px);
+    animation: heroLedeGlow 9s ease-in-out infinite;
+  }
+
+  .hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(72px);
+    will-change: transform, opacity;
+  }
+
+  .hero-glow--gold {
+    top: -8%;
+    right: 8%;
+    width: min(58vw, 560px);
+    height: min(58vw, 560px);
+    background: radial-gradient(circle, rgba(234, 215, 173, 0.55) 0%, rgba(198, 163, 106, 0.2) 42%, transparent 72%);
+    animation: heroGlowPulse 9s ease-in-out infinite;
+  }
+
+  .hero-glow--blue {
+    bottom: -6%;
+    left: -4%;
+    width: min(52vw, 500px);
+    height: min(52vw, 500px);
+    background: radial-gradient(circle, rgba(71, 111, 152, 0.42) 0%, rgba(71, 111, 152, 0.12) 45%, transparent 72%);
+    animation: heroGlowPulseAlt 11s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+
   .reveal {
     animation: revealIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-stagger > .scroll-reveal-item {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(1) {
+    transition-delay: 0ms;
+  }
+  .scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(2) {
+    transition-delay: 90ms;
+  }
+  .scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(3) {
+    transition-delay: 180ms;
+  }
+  .scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(4) {
+    transition-delay: 270ms;
+  }
+  .scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(5) {
+    transition-delay: 360ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .scroll-reveal-stagger > .scroll-reveal-item {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .hs-form-frame .hs-form fieldset {
+    max-width: none;
+  }
+
+  .hs-form-frame .hs-form .hs-form-field > label {
+    color: rgba(247, 245, 239, 0.72);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .hs-form-frame .hs-form .hs-input,
+  .hs-form-frame .hs-form textarea,
+  .hs-form-frame .hs-form select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f7f5ef;
+    font-size: 14px;
+  }
+
+  .hs-form-frame .hs-form .hs-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #ead7ad, #c6a36a);
+    color: #11100c;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .hs-form-frame .hs-form .hs-error-msgs label {
+    color: #ffb4b4;
+    font-size: 12px;
   }
 }
 

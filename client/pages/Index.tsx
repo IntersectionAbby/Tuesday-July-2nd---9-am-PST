@@ -2,17 +2,25 @@
 
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
+import { useHubSpotFormScript } from '@/hooks/use-hubspot-form-script';
+import HubSpotFormFrame from '@/components/HubSpotFormFrame';
+import CountUpMetric from '@/components/CountUpMetric';
 
 const LOGO_URL =
   'https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp';
 const SPEAKER_IMAGE =
   'https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Oren%20-%20Headshots/L1010305-2.jpg';
+const VIMEO_EMBED_URL =
+  'https://player.vimeo.com/video/1195793478?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1';
 
 export default function Index() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showMobileCta, setShowMobileCta] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+
+  useScrollReveal();
+  useHubSpotFormScript();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +28,6 @@ export default function Index() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = docHeight > 0 ? scrollTop / docHeight : 0;
       setScrollProgress(scrolled);
-      setScrollY(scrollTop);
 
       // Show mobile CTA after scrolling past hero
       const heroHeight = window.innerHeight * 0.8;
@@ -92,9 +99,14 @@ export default function Index() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-ink py-16 md:py-24 lg:py-32" style={{ minHeight: 'calc(100vh - 96px)' }}>
+        <section
+          className="relative overflow-hidden bg-ink py-10 md:py-14 lg:py-16"
+          style={{ minHeight: 'calc(100vh - 96px)' }}
+        >
           {/* Background decorations */}
           <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="hero-glow hero-glow--gold" aria-hidden="true" />
+            <div className="hero-glow hero-glow--blue" aria-hidden="true" />
             <div
               className="absolute inset-0"
               style={{
@@ -116,11 +128,12 @@ export default function Index() {
           </div>
 
           <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-stretch lg:gap-10">
               {/* Copy side */}
-              <div className="flex flex-col justify-start">
+              <div className="flex h-full min-h-0 flex-col justify-between gap-4 lg:min-h-full lg:gap-5">
+                <div className="flex flex-col gap-4 lg:gap-5">
                 {/* Kicker */}
-                <div className="mb-6 flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
                   <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
                     Live webinar · Thursday, June 4 at 12:00 noon PT
                   </p>
@@ -130,33 +143,42 @@ export default function Index() {
                 </div>
 
                 {/* Headline */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text leading-tight">
+                <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
+                  For accredited investors
+                </p>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80">
                   Finding Winners
                 </h1>
 
                 {/* Lede */}
-                <p className="mt-6 max-w-2xl text-lg md:text-xl text-text/76 leading-relaxed">
-                  This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.
-                </p>
+                <div className="relative" data-scroll-reveal data-scroll-reveal-delay="160">
+                  <div
+                    className="hero-lede-glow pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 sm:-inset-x-6 sm:-inset-y-4"
+                    aria-hidden
+                  />
+                  <p className="relative text-2xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-[1.65rem] md:text-3xl lg:text-[2.125rem]">
+                    This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.
+                  </p>
+                </div>
 
                 {/* CTAs */}
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2.5" data-scroll-reveal data-scroll-reveal-delay="240">
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-6 py-4 text-base font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-2px]"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-5 py-3 text-base font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-2px]"
                   >
                     Reserve Your Seat
                   </button>
                   <button
                     onClick={() => scrollTo('value')}
-                    className="inline-flex items-center justify-center gap-2.5 rounded-lg border border-white/16 bg-white/5 px-6 py-4 text-base font-bold text-text hover:border-gold-2/42 hover:bg-white/8 transition-all"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/16 bg-white/5 px-5 py-3 text-base font-bold text-text hover:border-gold-2/42 hover:bg-white/8 transition-all"
                   >
                     What You'll Learn
                   </button>
                 </div>
 
                 {/* Invite note */}
-                <div className="mt-6 max-w-2xl border-l-2 border-gold bg-gradient-to-r from-gold/14 to-gold/2 p-5 md:p-6">
+                <div className="border-l-2 border-gold bg-gradient-to-r from-gold/14 to-gold/2 p-4 md:p-4" data-scroll-reveal data-scroll-reveal-delay="320">
                   <strong className="block text-sm font-black uppercase tracking-wider text-text">
                     This webinar is for:
                   </strong>
@@ -168,40 +190,46 @@ export default function Index() {
                   </ul>
                 </div>
 
-                {/* Private room panel */}
-                <div className="mt-8 max-w-2xl overflow-hidden rounded-lg border border-white/13 bg-gradient-to-br from-gold-2/13 to-transparent backdrop-blur-sm shadow-lg md:grid md:grid-cols-2 md:gap-0">
-                  <div className="p-6 md:p-8">
+                </div>
+
+                {/* Inside the session — bottom of left column */}
+                <div
+                  className="w-full overflow-hidden rounded-lg border border-white/13 bg-gradient-to-br from-gold-2/13 to-transparent shadow-lg backdrop-blur-sm md:grid md:grid-cols-[1fr_auto] md:items-stretch"
+                  data-scroll-reveal
+                  data-scroll-reveal-delay="200"
+                >
+                  <div className="p-5 md:p-6">
                     <span className="text-xs font-black uppercase tracking-widest text-gold-2">
                       Inside the session
                     </span>
-                    <h2 className="serif mt-3 text-2xl md:text-3xl font-semibold text-text leading-tight">
+                    <h2 className="serif mt-2 text-xl font-semibold leading-tight text-text md:text-2xl">
                       What we'll cover
                     </h2>
-                    <ul className="mt-6 space-y-3">
-                      <li className="relative pl-6 text-sm text-text/68 leading-relaxed">
-                        <span className="absolute left-0 top-2 h-2 w-2 rounded-full bg-gold shadow-glow" />
+                    <ul className="mt-3 space-y-2.5">
+                      <li className="relative pl-6 text-sm leading-relaxed text-text/72">
+                        <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
                         How the $120M position came together
                       </li>
-                      <li className="relative pl-6 text-sm text-text/68 leading-relaxed">
-                        <span className="absolute left-0 top-2 h-2 w-2 rounded-full bg-gold shadow-glow" />
+                      <li className="relative pl-6 text-sm leading-relaxed text-text/72">
+                        <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
                         What makes a private company worth real attention
                       </li>
-                      <li className="relative pl-6 text-sm text-text/68 leading-relaxed">
-                        <span className="absolute left-0 top-2 h-2 w-2 rounded-full bg-gold shadow-glow" />
+                      <li className="relative pl-6 text-sm leading-relaxed text-text/72">
+                        <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
                         A live deal walkthrough and time for questions
                       </li>
                     </ul>
                   </div>
-                  <div className="space-y-px border-t border-white/10 md:border-t-0 md:border-l md:bg-white/10">
-                    <div className="bg-ink/24 p-6">
-                      <span className="text-xs font-black uppercase tracking-widest text-gold-2">Format</span>
-                      <strong className="serif mt-2 block text-xl md:text-2xl text-text leading-tight">
+                  <div className="grid grid-cols-2 divide-x divide-white/10 border-t border-white/10 bg-white/[0.06] md:grid-cols-1 md:divide-x-0 md:divide-y md:border-t-0 md:border-l md:min-w-[8.5rem] lg:min-w-[9.5rem]">
+                    <div className="flex flex-col justify-center gap-1.5 px-4 py-4 sm:px-5 sm:py-5">
+                      <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Format</span>
+                      <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
                         LIVE. (no recording)
                       </strong>
                     </div>
-                    <div className="bg-ink/24 p-6">
-                      <span className="text-xs font-black uppercase tracking-widest text-gold-2">Session</span>
-                      <strong className="serif mt-2 block text-xl md:text-2xl text-text leading-tight">
+                    <div className="flex flex-col justify-center gap-1.5 px-4 py-4 sm:px-5 sm:py-5">
+                      <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Session</span>
+                      <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
                         June 4 · <span className="nowrap">12:00 noon PT</span>
                       </strong>
                     </div>
@@ -210,46 +238,42 @@ export default function Index() {
               </div>
 
               {/* Video & Form side */}
-              <aside className="flex flex-col gap-6">
+              <aside className="flex h-full min-h-0 flex-col gap-4 lg:min-h-full" data-scroll-reveal data-scroll-reveal-delay="120">
                 {/* Video card */}
-                <div className="overflow-hidden rounded-lg border border-white/14 bg-white/5 shadow-2xl backdrop-blur">
-                  <div className="aspect-video bg-black">
+                <div className="shrink-0 overflow-hidden rounded-lg border border-white/14 bg-white/5 shadow-2xl backdrop-blur">
+                  <div className="relative aspect-video overflow-hidden bg-black">
                     <iframe
-                      src="https://player.vimeo.com/video/1179700315?h=208f5bc41b&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
-                      title="Finding Winners webinar preview"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                      src={VIMEO_EMBED_URL}
+                      title="Finding Winners"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
-                      className="w-full h-full"
+                      className="absolute inset-0 h-full w-full border-0"
                     />
                   </div>
-                  <div className="flex items-center justify-between gap-3 border-t border-white/10 bg-ink/74 px-6 py-4">
+                  <div className="flex items-center justify-between gap-3 border-t border-white/10 bg-ink/74 px-5 py-3">
                     <span className="text-xs font-bold uppercase tracking-wider text-text/58">
-                      Speaker preview
+                      oren klaff
                     </span>
                     <strong className="serif text-lg text-text">Finding Winners</strong>
                   </div>
                 </div>
 
                 {/* Form card */}
-                <div className="rounded-lg border border-white/14 bg-gradient-to-br from-gold-2/12 to-transparent p-6 md:p-8 shadow-2xl backdrop-blur-sm">
+                <div className="flex min-h-0 flex-1 flex-col rounded-lg border border-white/14 bg-gradient-to-br from-gold-2/12 to-transparent p-5 md:p-6 shadow-2xl backdrop-blur-sm">
                   <p className="text-xs font-black uppercase tracking-widest text-gold-2">
-                    Free RSVP
+                    free webinar
                   </p>
-                  <h2 className="serif mt-3 text-xl md:text-2xl font-semibold text-text leading-tight">
+                  <h2 className="serif mt-2 text-xl md:text-2xl font-semibold text-text leading-tight">
                     Finding Winners Webinar
                   </h2>
-                  <p className="mt-4 text-sm text-text/68 leading-relaxed">
+                  <p className="mt-3 text-sm text-text/68 leading-relaxed">
                     Thursday, June 4 · 12:00 noon PT. Join live for the deal walkthrough and discussion. No replay will be sent after the session.
                   </p>
 
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="mt-6 w-full inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-6 py-4 text-base font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-2px]"
-                  >
-                    Reserve Your Seat
-                  </button>
+                  <HubSpotFormFrame className="mt-4" />
 
-                  <p className="mt-4 text-xs text-text/48 leading-relaxed">
+                  <p className="mt-3 text-xs text-text/48 leading-relaxed">
                     This is a free live educational webinar. No recording will be distributed. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.
                   </p>
                 </div>
@@ -261,17 +285,19 @@ export default function Index() {
         {/* Proof Section */}
         <section id="proof" className="bg-ink-2/80 py-12 md:py-16 border-y border-white/10">
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4" data-scroll-reveal="stagger">
               {[
                 { value: '$120M', label: 'Private-company position built' },
                 { value: '$50M+', label: 'Capital raised through relationships' },
-                { value: '380+', label: 'Investor relationships' },
+                { value: '400+', label: 'Investor relationships' },
                 { value: '5×', label: 'Target return profile discussed' },
               ].map((metric, i) => (
-                <div key={i} className="bg-gradient-to-b from-white/035 to-white/012 p-8 md:p-10">
-                  <span className="serif block text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight font-variant-numeric">
-                    {metric.value}
-                  </span>
+                <div key={i} className="scroll-reveal-item bg-gradient-to-b from-white/035 to-white/012 p-8 md:p-10">
+                  <CountUpMetric
+                    value={metric.value}
+                    delay={i * 120}
+                    className="serif block text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight font-variant-numeric tabular-nums"
+                  />
                   <p className="mt-2 text-xs md:text-sm font-bold text-text/58">
                     {metric.label}
                   </p>
@@ -284,7 +310,7 @@ export default function Index() {
         {/* Work Section */}
         <section className="bg-paper py-16 md:py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="mb-16 flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between">
+            <div className="mb-16 flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between" data-scroll-reveal>
               <div>
                 <p className="text-xs font-black uppercase tracking-widest text-gold/70">
                   A few things we'll touch
@@ -295,37 +321,32 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="space-y-px border-t border-dark-text/14">
+            <div className="space-y-px border-t border-dark-text/14" data-scroll-reveal="stagger">
               {[
                 {
                   num: '01',
-                  title: 'Sourcing before consensus',
-                  desc: 'How opportunities show up before they become obvious to larger pools of capital.',
+                  title: 'Sourcing',
+                  desc: 'How I find deals before they hit the open market.',
                 },
                 {
                   num: '02',
-                  title: 'Operator diligence',
-                  desc: 'What to ask operators, customers, and domain specialists before conviction forms.',
+                  title: 'Pattern recognition',
+                  desc: 'What I look for in a winner that everyone else misses.',
                 },
                 {
                   num: '03',
-                  title: 'Investor relationships',
-                  desc: 'Why trust, speed, and relevance matter when private access is limited.',
+                  title: 'How Much to Invest',
+                  desc: 'How I price risk, time entries, and project exit.',
                 },
                 {
                   num: '04',
-                  title: 'Return discipline',
-                  desc: 'How upside, downside, timing, and liquidity shape the decision.',
-                },
-                {
-                  num: '05',
-                  title: 'Live deal context',
-                  desc: 'A current example of how the work comes together in real time.',
+                  title: '400+ investors',
+                  desc: 'I share my work with 400+ current investors and we do deals together.',
                 },
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-1 gap-4 border-b border-dark-text/14 py-8 md:grid-cols-3 md:gap-6"
+                  className="scroll-reveal-item grid grid-cols-1 gap-4 border-b border-dark-text/14 py-8 md:grid-cols-3 md:gap-6"
                 >
                   <span className="text-xs font-black uppercase tracking-wider text-gold/70">
                     {item.num}
@@ -345,21 +366,19 @@ export default function Index() {
         {/* Value Section */}
         <section id="value" className="bg-paper py-16 md:py-24 lg:py-32 border-t border-dark-text/12">
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="text-xs font-black uppercase tracking-widest text-gold/70">
-                  What you'll learn
-                </p>
-                <h2 className="serif mt-4 max-w-2xl text-4xl md:text-5xl font-semibold text-dark-text leading-tight">
-                  A practical look at how private-market conviction gets built.
-                </h2>
-              </div>
-              <p className="max-w-xl text-base md:text-lg text-dark-muted leading-relaxed">
+            <div className="mb-12 max-w-3xl flex flex-col gap-4 md:gap-5" data-scroll-reveal>
+              <h2 className="serif text-4xl md:text-5xl font-semibold text-dark-text leading-tight">
+                What you'll learn
+              </h2>
+              <p className="serif max-w-2xl text-2xl md:text-3xl font-semibold text-dark-text leading-snug">
+                A practical look at how private-market conviction gets built.
+              </p>
+              <p className="max-w-2xl text-base md:text-lg text-dark-muted leading-relaxed">
                 I'll share the process I use to source, evaluate, and stay close to private companies before they hit institutional radar. The goal is to make the thinking visible, not bury you in a polished deck.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4" data-scroll-reveal="stagger">
               {[
                 {
                   num: '01',
@@ -384,7 +403,7 @@ export default function Index() {
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="flex flex-col rounded-lg border border-dark-text/12 bg-gradient-to-b from-white/72 to-white/36 p-6 md:p-8 shadow-inner hover:shadow-lg hover:translate-y-[-4px] transition-all"
+                  className="scroll-reveal-item flex flex-col rounded-lg border border-dark-text/12 bg-gradient-to-b from-white/72 to-white/36 p-6 md:p-8 shadow-inner hover:shadow-lg hover:translate-y-[-4px] transition-all"
                 >
                   <span className="text-xs font-bold text-gold/70">{card.num}</span>
                   <h3 className="serif mt-6 text-xl md:text-2xl font-semibold text-dark-text leading-tight">
@@ -404,7 +423,7 @@ export default function Index() {
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
               {/* Speaker visual */}
-              <div className="relative">
+              <div className="relative" data-scroll-reveal>
                 <div className="relative overflow-hidden rounded-lg border border-white/14 bg-gradient-to-br from-gold-2/26 to-ink-2 shadow-2xl" style={{ aspectRatio: '4/5' }}>
                   <img
                     src={SPEAKER_IMAGE}
@@ -437,7 +456,7 @@ export default function Index() {
               </div>
 
               {/* Speaker copy */}
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center" data-scroll-reveal data-scroll-reveal-delay="120">
                 <p className="text-xs font-black uppercase tracking-widest text-gold-2">
                   The approach
                 </p>
@@ -448,14 +467,14 @@ export default function Index() {
                   The focus is on businesses with tangible demand, capable teams, and a reason to believe value can compound before the broader market notices.
                 </p>
 
-                <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2" data-scroll-reveal="stagger">
                   {[
                     { title: 'Real businesses', desc: 'Manufacturing businesses with real, tangible assets.' },
                     { title: 'High-quality deals', desc: 'Businesses with real demand, not just a market story.' },
                     { title: 'Proven operators', desc: 'Teams with evidence of execution and a credible plan.' },
                     { title: 'Built-in off-ramps', desc: 'Thoughtful attention to liquidity path from the start.' },
                   ].map((cred, i) => (
-                    <div key={i} className="rounded-lg bg-white/5 p-4 border border-white/12">
+                    <div key={i} className="scroll-reveal-item rounded-lg bg-white/5 p-4 border border-white/12">
                       <strong className="block text-sm text-text">{cred.title}</strong>
                       <span className="mt-2 block text-xs text-text/58 leading-relaxed">
                         {cred.desc}
@@ -471,13 +490,13 @@ export default function Index() {
         {/* Comparison Section */}
         <section className="bg-orange-50 py-16 md:py-24 lg:py-32 border-t border-dark-text/12">
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end">
+            <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end" data-scroll-reveal>
               <div>
                 <p className="text-xs font-black uppercase tracking-widest text-gold/70">
                   Why this session is different
                 </p>
                 <h2 className="serif mt-4 text-4xl md:text-5xl font-semibold text-dark-text leading-tight">
-                  Less market theater. More decision-making context.
+                  Less market theater. More Decision Making on Actual Deals.
                 </h2>
               </div>
               <p className="max-w-xl text-base text-dark-muted leading-relaxed">
@@ -485,8 +504,8 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="rounded-lg border border-dark-text/12 bg-white/36 p-8">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2" data-scroll-reveal="stagger">
+              <div className="scroll-reveal-item rounded-lg border border-dark-text/12 bg-white/36 p-8">
                 <h3 className="serif text-2xl font-semibold text-dark-text leading-tight">
                   What this is not
                 </h3>
@@ -505,7 +524,7 @@ export default function Index() {
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-white/13 bg-ink p-8 text-text shadow-lg">
+              <div className="scroll-reveal-item rounded-lg border border-white/13 bg-ink p-8 text-text shadow-lg">
                 <h3 className="serif text-2xl font-semibold leading-tight">
                   What you'll get
                 </h3>
@@ -530,7 +549,7 @@ export default function Index() {
         {/* Final CTA Section */}
         <section className="bg-ink py-16 md:py-24 lg:py-32 border-t border-white/10">
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="flex flex-col items-start justify-between gap-8 rounded-lg border border-white/13 bg-gradient-to-br from-gold/12 to-transparent p-8 md:p-12 md:flex-row md:items-center">
+            <div className="flex flex-col items-start justify-between gap-8 rounded-lg border border-white/13 bg-gradient-to-br from-gold/12 to-transparent p-8 md:p-12 md:flex-row md:items-center" data-scroll-reveal>
               <div className="max-w-xl">
                 <p className="text-xs font-black uppercase tracking-widest text-gold-2">
                   Join live
@@ -606,13 +625,15 @@ export default function Index() {
         </div>
       )}
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div
-            className="absolute inset-0 bg-black/78 backdrop-blur-sm"
-            onClick={() => setIsModalOpen(false)}
-          />
+      {/* Modal — kept in DOM so HubSpot can embed the form */}
+      <div
+        className={`fixed inset-0 z-50 flex items-center justify-center p-4 ${isModalOpen ? '' : 'pointer-events-none invisible'}`}
+        aria-hidden={!isModalOpen}
+      >
+        <div
+          className={`absolute inset-0 bg-black/78 backdrop-blur-sm transition-opacity ${isModalOpen ? 'opacity-100' : 'opacity-0'}`}
+          onClick={() => setIsModalOpen(false)}
+        />
           <div className="relative w-full max-w-lg rounded-2xl border border-white/14 bg-gradient-to-br from-ink-2 to-ink-3 p-6 md:p-10 shadow-2xl">
             <button
               onClick={() => setIsModalOpen(false)}
@@ -632,22 +653,14 @@ export default function Index() {
                 Request access to the live June 4 session. The webinar will not be distributed as a replay.
               </p>
 
-              <div className="mt-8 rounded-lg border border-white/10 bg-white/5 p-6">
-                <p className="text-sm text-text/68">
-                  To register, please visit our webinar registration page or contact{' '}
-                  <a href="mailto:info@intersectioncapital.com" className="font-semibold text-gold-2 hover:text-gold transition-colors">
-                    info@intersectioncapital.com
-                  </a>
-                </p>
-              </div>
+              <HubSpotFormFrame className="mt-8 rounded-lg border border-white/10 bg-white/5 p-6" />
 
               <p className="mt-6 text-xs text-text/38 leading-relaxed">
                 Educational webinar only. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.
               </p>
             </div>
           </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }
