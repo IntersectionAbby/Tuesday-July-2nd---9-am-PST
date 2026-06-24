@@ -144,9 +144,9 @@ export default function Index() {
 
                 {/* Headline */}
                 <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
-                  For accredited investors
+                  FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80" style={{ fontSize: '34px' }}>
                   Finding Winners
                 </h1>
 
