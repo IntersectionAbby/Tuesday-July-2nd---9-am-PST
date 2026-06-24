@@ -146,8 +146,8 @@ export default function Index() {
                 <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
                   FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80" style={{ fontSize: '34px' }}>
-                  Finding Winners
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80" style={{ fontSize: '28px' }}>
+                  I've got another deal to review with you:
                 </h1>
 
                 {/* Lede */}
@@ -157,7 +157,7 @@ export default function Index() {
                     aria-hidden
                   />
                   <p className="relative text-2xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-[1.65rem] md:text-3xl lg:text-[2.125rem]">
-                    This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.
+                    By the time most deals reach you, the 10X is already gone — you're buying what's left over at full price.
                   </p>
                 </div>
 
