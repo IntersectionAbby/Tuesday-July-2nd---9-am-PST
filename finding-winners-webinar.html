@@ -1,0 +1,2107 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Finding Winners Webinar
+-->
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8" />
+  <title>Finding Winners: How I Built a $120M Position | Intersection Capital</title>
+  <meta name="description" content="A live webinar from Intersection Capital on finding private-company winners, building conviction, and evaluating opportunities before they become obvious." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta property="og:title" content="Finding Winners: How I Built a $120M Position Without a Fund or VC" />
+  <meta property="og:description" content="Join Intersection Capital for a live conversation on private-company sourcing, diligence, and the thinking behind a $120M position." />
+  <meta property="og:url" content="https://intersectioncapital.com/finding-winners-webinar" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#080b0f" />
+  <link rel="dns-prefetch" href="https://js-na2.hsforms.net" />
+  <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root {
+--ink: #080b0f;
+--ink-2: #10161d;
+--ink-3: #18202a;
+--paper: #f6f3ee;
+--paper-2: #ebe6dc;
+--white: #ffffff;
+--text: #f7f5ef;
+--muted: #aeb7c0;
+--dark-text: #121820;
+--dark-muted: #5f6873;
+--line: rgba(255, 255, 255, 0.12);
+--dark-line: rgba(18, 24, 32, 0.12);
+--gold: #c6a36a;
+--gold-2: #ead7ad;
+--emerald: #1b8f74;
+--blue: #476f98;
+--radius: 8px;
+--shadow: 0 24px 80px rgba(5, 8, 13, 0.28);
+--serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+--sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+--ease: cubic-bezier(0.22, 1, 0.36, 1);
+--header-h: 96px;
+--mobile-cta-h: 76px;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html {
+scroll-behavior: smooth;
+scroll-padding-top: calc(var(--header-h) + 18px);
+-webkit-text-size-adjust: 100%;
+}
+body {
+min-height: 100vh;
+overflow-x: hidden;
+background: var(--ink);
+color: var(--muted);
+font-family: var(--sans);
+font-size: 16px;
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+}
+a {
+color: inherit;
+text-decoration: none;
+}
+.nowrap {
+white-space: nowrap;
+}
+img,
+iframe {
+display: block;
+max-width: 100%;
+}
+button,
+summary {
+font: inherit;
+}
+.container {
+width: min(100% - clamp(48px, 7vw, 96px), 1240px);
+margin: 0 auto;
+}
+.site-header {
+position: sticky;
+top: 0;
+z-index: 50;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+background: rgba(8, 11, 15, 0.82);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+}
+.header-inner {
+min-height: var(--header-h);
+display: grid;
+grid-template-columns: auto minmax(260px, 1fr) auto;
+align-items: center;
+gap: clamp(28px, 5vw, 72px);
+padding: 12px 0;
+}
+.brand {
+flex: 0 0 auto;
+line-height: 0;
+}
+.brand img {
+width: min(196px, 38vw);
+height: auto;
+}
+.desktop-nav {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: clamp(18px, 2.4vw, 34px);
+color: rgba(247, 245, 239, 0.72);
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.02em;
+}
+.desktop-nav a {
+transition: color 180ms var(--ease);
+}
+.desktop-nav a:hover {
+color: var(--text);
+}
+.header-actions {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+min-width: 0;
+}
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+min-height: 44px;
+padding: 12px 20px;
+border: 1px solid transparent;
+border-radius: 6px;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.01em;
+line-height: 1;
+white-space: nowrap;
+cursor: pointer;
+transition: transform 180ms var(--ease), border-color 180ms var(--ease), background 180ms var(--ease), color 180ms var(--ease), box-shadow 180ms var(--ease);
+}
+.btn:hover {
+transform: translateY(-1px);
+}
+.btn:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+outline: 2px solid var(--gold-2);
+outline-offset: 3px;
+}
+.btn-primary {
+background: linear-gradient(135deg, var(--gold-2), var(--gold));
+color: #11100c;
+box-shadow: 0 12px 30px rgba(198, 163, 106, 0.22);
+}
+.btn-primary:hover {
+box-shadow: 0 18px 44px rgba(198, 163, 106, 0.28);
+}
+.btn-secondary {
+border-color: rgba(255, 255, 255, 0.16);
+background: rgba(255, 255, 255, 0.05);
+color: var(--text);
+}
+.btn-secondary:hover {
+border-color: rgba(234, 215, 173, 0.42);
+background: rgba(255, 255, 255, 0.08);
+}
+.btn-dark {
+background: var(--ink);
+color: var(--text);
+border-color: var(--ink);
+}
+.btn-large {
+min-height: 46px;
+padding: 12px 20px;
+font-size: 15px;
+}
+.section-dark {
+background: var(--ink);
+color: var(--text);
+}
+.section-light {
+background: var(--paper);
+color: var(--dark-text);
+}
+.section-warm {
+background: #e7dfd2;
+color: var(--dark-text);
+}
+.section {
+padding: clamp(88px, 10vw, 148px) 0;
+}
+.hero {
+position: relative;
+isolation: isolate;
+min-height: calc(100vh - var(--header-h));
+padding: clamp(28px, 3.5vw, 48px) 0 clamp(36px, 4.5vw, 56px);
+overflow: hidden;
+}
+.hero-bg {
+position: absolute;
+inset: 0;
+z-index: -1;
+overflow: hidden;
+}
+.hero-bg::before {
+content: "";
+position: absolute;
+inset: -20%;
+background:
+radial-gradient(circle at 74% 18%, rgba(198, 163, 106, 0.18), transparent 28%),
+radial-gradient(circle at 18% 72%, rgba(71, 111, 152, 0.18), transparent 26%),
+linear-gradient(135deg, #080b0f 0%, #121820 48%, #090c11 100%);
+animation: heroBgGlow 10s ease-in-out infinite;
+}
+.hero-glow {
+position: absolute;
+border-radius: 50%;
+pointer-events: none;
+filter: blur(72px);
+will-change: transform, opacity;
+}
+.hero-glow--gold {
+top: -8%;
+right: 8%;
+width: min(58vw, 560px);
+height: min(58vw, 560px);
+background: radial-gradient(circle, rgba(234, 215, 173, 0.55) 0%, rgba(198, 163, 106, 0.2) 42%, transparent 72%);
+animation: heroGlowPulse 9s ease-in-out infinite;
+}
+.hero-glow--blue {
+bottom: -6%;
+left: -4%;
+width: min(52vw, 500px);
+height: min(52vw, 500px);
+background: radial-gradient(circle, rgba(71, 111, 152, 0.42) 0%, rgba(71, 111, 152, 0.12) 45%, transparent 72%);
+animation: heroGlowPulseAlt 11s ease-in-out infinite;
+animation-delay: -3s;
+}
+.hero-bg::after {
+content: "";
+position: absolute;
+top: 8%;
+right: 6%;
+bottom: 8%;
+width: min(46vw, 680px);
+background:
+radial-gradient(circle at 64% 24%, rgba(198, 163, 106, 0.18), transparent 32%),
+linear-gradient(90deg, rgba(8, 11, 15, 0.18), rgba(8, 11, 15, 0.54));
+opacity: 0.34;
+pointer-events: none;
+}
+.market-grid {
+position: absolute;
+inset: 0;
+background-image:
+linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+background-size: 68px 68px;
+mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+}
+.signal-line {
+position: absolute;
+width: 56vw;
+height: 1px;
+left: 48%;
+background: linear-gradient(90deg, transparent, rgba(234, 215, 173, 0.55), transparent);
+transform-origin: left center;
+animation: signalDrift 9s linear infinite;
+}
+.signal-line-a {
+top: 25%;
+transform: rotate(-17deg);
+}
+.signal-line-b {
+top: 58%;
+animation-delay: -3s;
+transform: rotate(10deg);
+}
+.hero-grid {
+display: grid;
+grid-template-columns: minmax(0, 0.98fr) minmax(390px, 0.78fr);
+gap: clamp(24px, 3.5vw, 48px);
+align-items: stretch;
+}
+.hero-copy {
+grid-column: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+gap: clamp(10px, 1.4vw, 16px);
+min-height: 100%;
+padding-top: 0;
+}
+.hero-bottom {
+margin-top: clamp(18px, 2vw, 28px);
+}
+.private-room-panel--in-copy {
+margin-top: auto;
+width: 100%;
+max-width: none;
+display: flex;
+flex-direction: column;
+overflow: visible;
+border: 1px solid rgba(255, 255, 255, 0.13);
+border-radius: var(--radius);
+background:
+linear-gradient(135deg, rgba(234, 215, 173, 0.13), transparent 38%),
+rgba(255, 255, 255, 0.045);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+.private-room-panel--in-copy .private-room-panel__copy {
+padding: clamp(18px, 2.2vw, 24px);
+}
+.private-room-panel--in-copy ul {
+display: grid;
+gap: 10px;
+margin-top: 12px;
+list-style: none;
+}
+.private-room-panel__proof--side {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 1px;
+min-width: 0;
+min-height: 0;
+align-content: stretch;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.06);
+}
+.private-room-panel__proof--side div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 6px;
+min-height: 0;
+padding: clamp(14px, 2vw, 20px) clamp(16px, 2.2vw, 22px);
+background: transparent;
+}
+.private-room-panel__proof--side span {
+color: var(--gold-2);
+font-size: 11px;
+font-weight: 850;
+letter-spacing: 0.16em;
+line-height: 1.1;
+text-transform: uppercase;
+}
+.private-room-panel__proof--side strong {
+color: var(--text);
+font-family: var(--serif);
+font-size: clamp(1.05rem, 3.4vw, 1.25rem);
+font-weight: 650;
+line-height: 1.1;
+overflow-wrap: anywhere;
+}
+@media (min-width: 640px) {
+.private-room-panel__proof--side strong {
+  font-size: clamp(1.125rem, 2.4vw, 1.375rem);
+}
+}
+@media (min-width: 768px) {
+.private-room-panel--in-copy {
+display: grid;
+grid-template-columns: minmax(0, 1fr) minmax(8.5rem, auto);
+align-items: stretch;
+}
+.private-room-panel__proof--side {
+grid-template-columns: 1fr;
+min-width: 8.5rem;
+border-top: 0;
+border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.private-room-panel__proof--side div + div {
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+}
+@media (min-width: 1024px) {
+.private-room-panel__proof--side {
+  min-width: 9.5rem;
+}
+.private-room-panel__proof--side strong {
+  font-size: 1.5rem;
+}
+}
+.private-room-panel--full {
+max-width: none;
+width: 100%;
+margin-top: 0;
+display: flex;
+flex-direction: column;
+grid-template-columns: none;
+}
+.private-room-panel__proof--strip {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 1px;
+min-width: 0;
+min-height: 0;
+border-left: 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.06);
+}
+.private-room-panel--full .private-room-panel__proof div {
+min-height: 0;
+padding: clamp(14px, 2vw, 22px) clamp(16px, 2.2vw, 28px);
+background: transparent;
+}
+.private-room-panel--full .private-room-panel__copy {
+padding: clamp(18px, 2.2vw, 28px);
+}
+.private-room-panel--full ul {
+display: grid;
+gap: 10px;
+margin-top: 16px;
+}
+@media (min-width: 640px) {
+.private-room-panel--full ul {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 16px 24px;
+}
+}
+@media (min-width: 1024px) {
+.private-room-panel--full ul {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.private-room-panel--full ul li:last-child {
+grid-column: auto;
+}
+}
+.hero-copy .hero-lede,
+.hero-copy .invite-note {
+max-width: none;
+}
+.hero-copy .hero-cta,
+.hero-copy .invite-note {
+margin-top: 0;
+}
+.hero-kicker-row {
+margin-bottom: 0;
+display: flex;
+align-items: center;
+gap: 12px;
+flex-wrap: wrap;
+}
+.hero-kicker-row span {
+padding: 6px 10px;
+border: 1px solid rgba(234, 215, 173, 0.42);
+border-radius: 999px;
+background: linear-gradient(135deg, rgba(234, 215, 173, 0.18), rgba(198, 163, 106, 0.06));
+color: rgba(247, 245, 239, 0.78);
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.eyebrow,
+.section-label,
+.form-kicker {
+color: var(--gold-2);
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 0.11em;
+line-height: 1.35;
+text-transform: uppercase;
+}
+.section-light .section-label,
+.section-warm .section-label {
+color: #7c6132;
+}
+.hero h1 {
+max-width: 780px;
+margin-top: 0;
+color: var(--text);
+font-family: var(--sans);
+font-size: clamp(3rem, 6vw, 5.75rem);
+font-weight: 750;
+line-height: 0.95;
+letter-spacing: -0.02em;
+}
+.hero-audience {
+margin: clamp(8px, 1.2vw, 14px) 0 clamp(4px, 0.8vw, 8px);
+color: var(--text);
+text-align: center;
+font-size: clamp(13px, 1.5vw, 15px);
+letter-spacing: 0.14em;
+}
+.hero-lede-wrap {
+position: relative;
+margin-top: 10px;
+max-width: none;
+}
+.hero-lede-glow {
+position: absolute;
+inset: -12px -20px -16px -12px;
+z-index: 0;
+border-radius: 20px;
+pointer-events: none;
+background: radial-gradient(
+  ellipse 88% 85% at 8% 50%,
+  rgba(234, 215, 173, 0.34) 0%,
+  rgba(198, 163, 106, 0.16) 44%,
+  transparent 72%
+);
+filter: blur(20px);
+animation: heroLedeGlow 9s ease-in-out infinite;
+}
+@keyframes heroLedeGlow {
+0%, 100% { opacity: 0.72; transform: scale(1); }
+50% { opacity: 1; transform: scale(1.04); }
+}
+.hero-lede-wrap .hero-lede {
+position: relative;
+z-index: 1;
+margin-top: 0;
+max-width: none;
+color: var(--gold-2);
+font-size: clamp(1.35rem, 2.4vw, 2.125rem);
+font-weight: 650;
+line-height: 1.35;
+letter-spacing: -0.015em;
+text-shadow: 0 1px 24px rgba(198, 163, 106, 0.28);
+}
+.hero-lede {
+max-width: 620px;
+margin-top: 10px;
+color: var(--gold-2);
+font-size: clamp(1.35rem, 2.4vw, 2.125rem);
+font-weight: 650;
+line-height: 1.35;
+letter-spacing: -0.015em;
+text-shadow: 0 1px 24px rgba(198, 163, 106, 0.28);
+}
+.hero-cta {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 14px;
+}
+.invite-note {
+display: grid;
+gap: 4px;
+max-width: 560px;
+margin-top: 12px;
+padding: 14px 16px;
+border-left: 2px solid var(--gold);
+background: linear-gradient(90deg, rgba(198, 163, 106, 0.14), rgba(198, 163, 106, 0.02));
+}
+.invite-note strong {
+color: var(--text);
+font-size: 13px;
+font-weight: 800;
+letter-spacing: 0.02em;
+}
+.invite-note span {
+color: rgba(247, 245, 239, 0.62);
+font-size: 13px;
+line-height: 1.45;
+}
+.invite-note ul {
+display: grid;
+gap: 8px;
+margin-top: 10px;
+padding-left: 0;
+list-style: none;
+}
+.invite-note li {
+color: rgba(247, 245, 239, 0.62);
+font-size: 13px;
+line-height: 1.45;
+}
+.private-room-panel {
+display: grid;
+grid-template-columns: minmax(0, 1fr) minmax(190px, 0.42fr);
+gap: 22px;
+align-items: stretch;
+max-width: 720px;
+margin-top: 30px;
+overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.13);
+border-radius: var(--radius);
+background:
+linear-gradient(135deg, rgba(234, 215, 173, 0.13), transparent 38%),
+rgba(255, 255, 255, 0.045);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+@media (min-width: 1081px) {
+.hero-grid {
+align-items: stretch;
+}
+.hero-copy {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.invite-note {
+margin-bottom: 0;
+}
+}
+.private-room-panel__copy {
+padding: clamp(26px, 2.8vw, 34px);
+}
+.private-room-panel__label {
+display: block;
+color: var(--gold-2);
+font-size: 10px;
+font-weight: 850;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+}
+.private-room-panel h2 {
+max-width: 430px;
+margin-top: 8px;
+color: var(--text);
+font-family: var(--serif);
+font-size: clamp(1.45rem, 2vw, 1.9rem);
+font-weight: 650;
+line-height: 1.08;
+}
+.private-room-panel ul {
+display: grid;
+gap: 12px;
+margin-top: 22px;
+list-style: none;
+}
+.private-room-panel li {
+position: relative;
+padding-left: 22px;
+color: rgba(247, 245, 239, 0.68);
+font-size: 14px;
+line-height: 1.48;
+}
+.private-room-panel li::before {
+content: "";
+position: absolute;
+top: 0.52em;
+left: 0;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--gold);
+box-shadow: 0 0 18px rgba(198, 163, 106, 0.5);
+}
+.private-room-panel__proof:not(.private-room-panel__proof--side) {
+display: grid;
+align-content: stretch;
+gap: 1px;
+min-height: 100%;
+min-width: 17rem;
+border-left: 1px solid rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.1);
+}
+.private-room-panel__proof:not(.private-room-panel__proof--side) div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 10px;
+min-height: 120px;
+padding: 32px 28px;
+background: rgba(8, 11, 15, 0.24);
+}
+.private-room-panel__proof:not(.private-room-panel__proof--side) span {
+color: rgba(247, 245, 239, 0.44);
+font-size: 12px;
+font-weight: 850;
+letter-spacing: 0.14em;
+line-height: 1;
+text-transform: uppercase;
+}
+.private-room-panel__proof:not(.private-room-panel__proof--side) strong {
+color: var(--text);
+font-family: var(--serif);
+font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+font-weight: 650;
+line-height: 1.05;
+}
+@media (min-width: 768px) {
+.private-room-panel__proof:not(.private-room-panel__proof--strip):not(.private-room-panel__proof--side) {
+min-width: 19rem;
+}
+.private-room-panel__proof:not(.private-room-panel__proof--strip):not(.private-room-panel__proof--side) div {
+min-height: 100%;
+padding: 40px 32px;
+}
+.private-room-panel--full .private-room-panel__proof--strip div {
+padding: clamp(16px, 2vw, 24px) clamp(18px, 2.5vw, 32px);
+}
+}
+.registration-panel {
+position: sticky;
+top: calc(var(--header-h) + 24px);
+grid-column: 2;
+grid-row: 1;
+display: grid;
+gap: 14px;
+align-self: stretch;
+height: 100%;
+min-height: 100%;
+}
+.media-card,
+.form-card,
+.insight-card,
+.comparison-card,
+.credential-card {
+border-radius: var(--radius);
+}
+.media-card {
+position: relative;
+overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.14);
+background: rgba(255, 255, 255, 0.05);
+box-shadow: var(--shadow);
+}
+.video-frame {
+position: relative;
+aspect-ratio: 16 / 9;
+overflow: hidden;
+background: #000;
+}
+.video-frame iframe {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+max-width: none;
+border: 0;
+}
+.media-overlay {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 14px;
+padding: 12px 18px;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+background: rgba(8, 11, 15, 0.74);
+}
+.media-overlay span {
+color: rgba(247, 245, 239, 0.58);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.media-overlay strong {
+color: var(--text);
+font-family: var(--serif);
+font-size: 18px;
+}
+.form-card {
+border: 1px solid rgba(255, 255, 255, 0.14);
+background:
+linear-gradient(145deg, rgba(234, 215, 173, 0.12), transparent 34%),
+linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.045));
+padding: clamp(18px, 2.2vw, 26px);
+box-shadow: var(--shadow);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+flex: 1;
+display: flex;
+flex-direction: column;
+min-height: 0;
+}
+.form-card h2 {
+margin-top: 8px;
+color: var(--text);
+font-family: var(--serif);
+font-size: clamp(1.35rem, 1.75vw, 1.72rem);
+line-height: 1.15;
+}
+.form-card p {
+margin-top: 10px;
+color: rgba(247, 245, 239, 0.68);
+font-size: 13px;
+line-height: 1.5;
+}
+.hs-form-frame {
+min-height: 154px;
+margin-top: 14px;
+}
+.fineprint,
+.noscript {
+font-size: 11px !important;
+color: rgba(247, 245, 239, 0.48) !important;
+}
+.proof-band {
+padding: clamp(42px, 5vw, 64px) 0;
+background: #0d1218;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.metrics-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 1px;
+overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: var(--radius);
+background: rgba(255, 255, 255, 0.1);
+}
+.metric {
+padding: clamp(30px, 4vw, 46px);
+background: linear-gradient(180deg, #111820, #0c1117);
+}
+.metric span {
+color: var(--text);
+font-family: var(--serif);
+font-size: clamp(2rem, 4vw, 3.5rem);
+font-weight: 650;
+letter-spacing: 0;
+line-height: 1;
+font-variant-numeric: tabular-nums;
+}
+.metric p {
+margin-top: 10px;
+color: rgba(247, 245, 239, 0.58);
+font-size: 13px;
+font-weight: 700;
+}
+.logos-section {
+padding: clamp(72px, 7vw, 104px) 0;
+border-bottom: 1px solid var(--dark-line);
+}
+.focus-band {
+display: grid;
+gap: clamp(28px, 4vw, 48px);
+}
+.focus-band__header {
+display: grid;
+grid-template-columns: minmax(0, 0.58fr) minmax(280px, 0.42fr);
+gap: clamp(28px, 5vw, 72px);
+align-items: end;
+}
+.focus-band__header h2 {
+max-width: 460px;
+color: var(--dark-text);
+font-family: var(--serif);
+font-size: clamp(1.8rem, 3vw, 3rem);
+font-weight: 650;
+line-height: 1.02;
+letter-spacing: 0;
+}
+.focus-grid {
+display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+gap: 14px;
+}
+.focus-item {
+position: relative;
+min-height: 150px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: clamp(22px, 2.6vw, 30px);
+overflow: hidden;
+border: 1px solid var(--dark-line);
+border-radius: var(--radius);
+background:
+linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.42)),
+var(--paper);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+transition: transform 220ms var(--ease), border-color 220ms var(--ease), box-shadow 220ms var(--ease);
+}
+.focus-item::after {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+height: 3px;
+background: linear-gradient(90deg, rgba(198, 163, 106, 0.95), rgba(198, 163, 106, 0.08));
+opacity: 0.85;
+}
+.focus-item:hover {
+transform: translateY(-4px);
+border-color: rgba(124, 97, 50, 0.24);
+box-shadow: 0 18px 46px rgba(18, 24, 32, 0.1);
+}
+.focus-item span {
+color: rgba(124, 97, 50, 0.62);
+font-size: 11px;
+font-weight: 850;
+letter-spacing: 0.12em;
+}
+.focus-item strong {
+color: var(--dark-text);
+font-family: var(--serif);
+font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+font-weight: 650;
+line-height: 1.08;
+}
+.split-intro {
+display: grid;
+grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.75fr);
+gap: clamp(44px, 7vw, 104px);
+align-items: end;
+}
+.intro-copy h2,
+.speaker-copy h2,
+.cta-layout h2 {
+margin-top: 12px;
+font-family: var(--serif);
+font-size: clamp(2.2rem, 4.5vw, 4.6rem);
+font-weight: 650;
+line-height: 0.98;
+letter-spacing: 0;
+}
+.intro-text,
+.speaker-copy p,
+.cta-layout p {
+color: var(--dark-muted);
+font-size: clamp(17px, 1.6vw, 20px);
+line-height: 1.65;
+}
+.split-intro--stacked {
+grid-template-columns: 1fr;
+align-items: start;
+gap: clamp(16px, 2.5vw, 24px);
+max-width: 42rem;
+margin-bottom: clamp(36px, 5vw, 56px);
+}
+.split-intro--stacked .intro-copy h2 {
+margin-top: 0;
+font-size: clamp(2.2rem, 4.5vw, 4.6rem);
+}
+.intro-subhead {
+margin: 0;
+font-family: var(--serif);
+font-size: clamp(1.35rem, 2.4vw, 2rem);
+font-weight: 650;
+line-height: 1.15;
+color: var(--dark-text);
+}
+.split-intro--stacked .intro-text {
+margin: 0;
+}
+.section-dark .speaker-copy p,
+.section-dark .cta-layout p {
+color: rgba(247, 245, 239, 0.68);
+}
+.insight-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 22px;
+margin-top: clamp(48px, 6vw, 78px);
+}
+.insight-card {
+position: relative;
+display: grid;
+grid-template-rows: auto minmax(7.6em, auto) 1fr;
+align-content: start;
+min-height: 260px;
+padding: clamp(32px, 3.6vw, 42px);
+border: 1px solid var(--dark-line);
+background:
+linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.42)),
+var(--paper);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), background 220ms var(--ease), border-color 220ms var(--ease);
+}
+.insight-card::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(--gold), rgba(198, 163, 106, 0.18));
+}
+.insight-card:hover {
+transform: translateY(-4px);
+border-color: rgba(124, 97, 50, 0.24);
+background: rgba(255, 255, 255, 0.72);
+box-shadow: 0 18px 50px rgba(18, 24, 32, 0.12);
+}
+.card-index {
+color: #8b6c36;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 0.1em;
+}
+.insight-card h3 {
+margin-top: 28px;
+align-self: start;
+color: var(--dark-text);
+font-family: var(--serif);
+font-size: clamp(1.35rem, 2vw, 1.75rem);
+line-height: 1.1;
+}
+.insight-card p {
+margin-top: 0;
+color: var(--dark-muted);
+font-size: 14px;
+line-height: 1.65;
+}
+.speaker-section {
+position: relative;
+overflow: hidden;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.speaker-section::before {
+content: "";
+position: absolute;
+inset: 0;
+background:
+linear-gradient(90deg, rgba(198, 163, 106, 0.09), transparent 45%),
+linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+background-size: auto, 100% 72px;
+pointer-events: none;
+}
+.speaker-layout {
+position: relative;
+display: grid;
+grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
+gap: clamp(56px, 8vw, 112px);
+align-items: center;
+}
+.speaker-visual {
+position: relative;
+}
+.portrait-frame {
+position: relative;
+aspect-ratio: 4 / 5;
+overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: var(--radius);
+background:
+radial-gradient(circle at 50% 20%, rgba(234, 215, 173, 0.26), transparent 24%),
+linear-gradient(145deg, #1a222c, #080b0f);
+box-shadow: var(--shadow);
+}
+.portrait-frame img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: 50% 24%;
+filter: saturate(0.92) contrast(1.04);
+}
+.portrait-frame::before {
+content: "";
+position: absolute;
+inset: 0;
+border: 1px solid rgba(234, 215, 173, 0.16);
+background:
+linear-gradient(180deg, transparent 52%, rgba(8, 11, 15, 0.48)),
+radial-gradient(circle at 50% 18%, transparent 0 42%, rgba(8, 11, 15, 0.2) 78%);
+pointer-events: none;
+}
+.portrait-monogram {
+position: absolute;
+inset: 0;
+display: grid;
+place-items: center;
+color: rgba(247, 245, 239, 0.18);
+font-family: var(--serif);
+font-size: clamp(6rem, 16vw, 13rem);
+font-weight: 700;
+}
+.portrait-lines {
+position: absolute;
+inset: auto 0 0;
+height: 46%;
+background:
+linear-gradient(120deg, transparent 10%, rgba(234, 215, 173, 0.34) 10.5%, transparent 11% 36%, rgba(71, 111, 152, 0.28) 36.5%, transparent 37%),
+linear-gradient(to top, rgba(8, 11, 15, 0.86), transparent);
+}
+.credential-card {
+position: absolute;
+right: -20px;
+bottom: 28px;
+width: min(280px, 74%);
+padding: 20px;
+border: 1px solid rgba(255, 255, 255, 0.15);
+background: rgba(16, 22, 29, 0.78);
+box-shadow: var(--shadow);
+backdrop-filter: blur(16px);
+}
+.credential-card span {
+color: rgba(247, 245, 239, 0.5);
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+.credential-card strong {
+display: block;
+margin-top: 8px;
+color: var(--text);
+font-family: var(--serif);
+font-size: 1.45rem;
+line-height: 1.1;
+}
+.credential-card p {
+margin-top: 8px;
+color: rgba(247, 245, 239, 0.58);
+font-size: 13px;
+}
+.credential-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 18px;
+margin-top: 44px;
+}
+.credential-grid div {
+padding: 26px;
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: var(--radius);
+background: rgba(255, 255, 255, 0.05);
+}
+.credential-grid strong {
+display: block;
+color: var(--text);
+font-size: 14px;
+}
+.credential-grid span {
+display: block;
+margin-top: 8px;
+color: rgba(247, 245, 239, 0.58);
+font-size: 13px;
+line-height: 1.55;
+}
+.comparison-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 16px;
+margin-top: clamp(34px, 5vw, 64px);
+}
+.comparison-card {
+padding: clamp(26px, 4vw, 44px);
+border: 1px solid rgba(18, 24, 32, 0.12);
+}
+.comparison-card.muted {
+background: rgba(255, 255, 255, 0.36);
+}
+.comparison-card.premium {
+background: var(--ink);
+color: var(--text);
+box-shadow: 0 24px 70px rgba(18, 24, 32, 0.22);
+}
+.comparison-card h3 {
+font-family: var(--serif);
+font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+line-height: 1.1;
+}
+.comparison-card ul {
+display: grid;
+gap: 14px;
+margin-top: 26px;
+list-style: none;
+}
+.comparison-card li {
+position: relative;
+padding-left: 28px;
+color: var(--dark-muted);
+}
+.comparison-card.premium li {
+color: rgba(247, 245, 239, 0.7);
+}
+.comparison-card li::before {
+content: "";
+position: absolute;
+top: 0.62em;
+left: 0;
+width: 10px;
+height: 10px;
+border: 1px solid #8b6c36;
+border-radius: 50%;
+}
+.comparison-card.premium li::before {
+background: var(--gold);
+border-color: var(--gold);
+box-shadow: 0 0 18px rgba(198, 163, 106, 0.46);
+}
+.cta-section {
+padding: clamp(56px, 8vw, 92px) 0;
+}
+.cta-layout {
+display: grid;
+grid-template-columns: minmax(0, 1fr) auto;
+gap: 28px;
+align-items: center;
+padding: clamp(30px, 5vw, 58px);
+border: 1px solid rgba(255, 255, 255, 0.13);
+border-radius: var(--radius);
+background:
+linear-gradient(135deg, rgba(198, 163, 106, 0.12), transparent 46%),
+rgba(255, 255, 255, 0.045);
+}
+.cta-layout h2 {
+max-width: 780px;
+}
+.cta-layout p {
+max-width: 680px;
+margin-top: 18px;
+}
+.site-footer {
+padding: 36px 0;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+background: #07090c;
+}
+.footer-stack {
+display: grid;
+gap: 22px;
+}
+.footer-inner {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 28px;
+}
+.footer-inner img {
+width: 210px;
+height: auto;
+}
+.footer-inner p {
+margin-top: 10px;
+color: rgba(247, 245, 239, 0.46);
+font-size: 13px;
+}
+.footer-links {
+display: flex;
+flex-wrap: wrap;
+gap: 18px;
+color: rgba(247, 245, 239, 0.62);
+font-size: 13px;
+font-weight: 700;
+}
+.footer-links a:hover {
+color: var(--text);
+}
+.footer-disclosure {
+max-width: 980px;
+padding-top: 18px;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+color: rgba(247, 245, 239, 0.36);
+font-size: 11px;
+line-height: 1.55;
+}
+.mobile-cta-bar {
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 60;
+min-height: var(--mobile-cta-h);
+padding: 10px 0 max(10px, env(safe-area-inset-bottom));
+border-top: 1px solid rgba(255, 255, 255, 0.12);
+background: rgba(8, 11, 15, 0.9);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+transform: translateY(110%);
+transition: transform 260ms var(--ease);
+}
+.mobile-cta-bar.is-visible {
+transform: translateY(0);
+}
+.mobile-cta-inner {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 14px;
+}
+.mobile-cta-inner span {
+display: block;
+color: rgba(247, 245, 239, 0.52);
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.mobile-cta-inner strong {
+display: block;
+color: var(--text);
+font-size: 13px;
+}
+body.modal-open {
+overflow: hidden;
+}
+.rsvp-modal {
+position: fixed;
+inset: 0;
+z-index: 120;
+display: grid;
+place-items: center;
+padding: clamp(18px, 4vw, 44px);
+opacity: 0;
+pointer-events: none;
+transition: opacity 220ms var(--ease);
+}
+.rsvp-modal[aria-hidden="false"] {
+opacity: 1;
+pointer-events: auto;
+}
+.rsvp-modal__backdrop {
+position: absolute;
+inset: 0;
+background:
+radial-gradient(circle at 50% 12%, rgba(198, 163, 106, 0.18), transparent 36%),
+rgba(8, 11, 15, 0.78);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+}
+.rsvp-modal__dialog {
+position: relative;
+width: min(100%, 520px);
+max-height: min(92vh, 760px);
+overflow-y: auto;
+padding: clamp(28px, 4vw, 44px);
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: calc(var(--radius) + 4px);
+background:
+linear-gradient(145deg, rgba(234, 215, 173, 0.08), transparent 34%),
+linear-gradient(180deg, #10161d, #080b0f);
+box-shadow: var(--shadow);
+}
+.rsvp-modal__close {
+position: absolute;
+top: 16px;
+right: 16px;
+display: grid;
+place-items: center;
+width: 40px;
+height: 40px;
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 999px;
+background: rgba(255, 255, 255, 0.05);
+color: rgba(247, 245, 239, 0.82);
+cursor: pointer;
+transition: border-color 180ms var(--ease), background 180ms var(--ease), color 180ms var(--ease);
+}
+.rsvp-modal__close:hover {
+border-color: rgba(234, 215, 173, 0.42);
+background: rgba(255, 255, 255, 0.1);
+color: var(--text);
+}
+.rsvp-modal__close svg {
+width: 20px;
+height: 20px;
+}
+.scroll-progress {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 55;
+height: 2px;
+background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+box-shadow: 0 0 18px rgba(198, 163, 106, 0.35);
+transform-origin: left center;
+}
+.work-list {
+border-top: 1px solid var(--dark-line);
+}
+.work-row {
+display: grid;
+grid-template-columns: minmax(0, 0.18fr) minmax(0, 0.34fr) minmax(0, 1fr);
+gap: clamp(16px, 3vw, 28px);
+padding: clamp(24px, 3vw, 34px) 0;
+border-bottom: 1px solid var(--dark-line);
+}
+.work-row strong {
+color: var(--dark-text);
+font-family: var(--serif);
+font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+font-weight: 650;
+line-height: 1.12;
+}
+.work-row p {
+color: var(--dark-muted);
+font-size: 14px;
+line-height: 1.65;
+}
+@keyframes signalDrift {
+0% { transform: translateX(-8%) rotate(-17deg); opacity: 0; }
+12% { opacity: 1; }
+88% { opacity: 1; }
+100% { transform: translateX(18%) rotate(-17deg); opacity: 0; }
+}
+@keyframes heroGlowPulse {
+0%, 100% { opacity: 0.32; transform: scale(1) translate(0, 0); }
+50% { opacity: 0.72; transform: scale(1.12) translate(2%, -2%); }
+}
+@keyframes heroGlowPulseAlt {
+0%, 100% { opacity: 0.28; transform: scale(1) translate(0, 0); }
+50% { opacity: 0.58; transform: scale(1.1) translate(-3%, 2%); }
+}
+@keyframes heroBgGlow {
+0%, 100% { filter: brightness(1); }
+50% { filter: brightness(1.12); }
+}
+.hs-form-frame .hs-form fieldset {
+max-width: none;
+}
+.hs-form-frame .hs-form .hs-form-field > label {
+color: rgba(247, 245, 239, 0.72);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.04em;
+}
+.hs-form-frame .hs-form .hs-input,
+.hs-form-frame .hs-form textarea,
+.hs-form-frame .hs-form select {
+width: 100%;
+min-height: 44px;
+padding: 10px 14px;
+border: 1px solid rgba(255, 255, 255, 0.16);
+border-radius: 6px;
+background: rgba(255, 255, 255, 0.06);
+color: var(--text);
+font-family: var(--sans);
+font-size: 14px;
+}
+.hs-form-frame .hs-form .hs-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 48px;
+width: 100%;
+margin-top: 8px;
+padding: 12px 20px;
+border: 0;
+border-radius: 6px;
+background: linear-gradient(135deg, var(--gold-2), var(--gold));
+color: #11100c;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+}
+.hs-form-frame .hs-form .hs-error-msgs label {
+color: #ffb4b4;
+font-size: 12px;
+}
+@media (max-width: 1080px) {
+.header-inner {
+grid-template-columns: auto 1fr auto;
+gap: 18px;
+}
+.desktop-nav {
+display: none;
+}
+.hero-grid {
+grid-template-columns: 1fr;
+}
+.hero-copy {
+grid-column: 1;
+order: 1;
+}
+.registration-panel {
+position: static;
+grid-column: 1;
+grid-row: auto;
+order: 2;
+}
+.metrics-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.focus-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.focus-band__header {
+grid-template-columns: 1fr;
+}
+.split-intro {
+grid-template-columns: 1fr;
+}
+.insight-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.speaker-layout {
+grid-template-columns: 1fr;
+}
+.credential-card {
+right: 12px;
+width: min(280px, 82%);
+}
+.comparison-grid {
+grid-template-columns: 1fr;
+}
+.cta-layout {
+grid-template-columns: 1fr;
+}
+.footer-inner {
+flex-direction: column;
+align-items: flex-start;
+}
+.private-room-panel {
+grid-template-columns: 1fr;
+}
+.private-room-panel__proof:not(.private-room-panel__proof--side) {
+border-left: 0;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.work-row {
+grid-template-columns: 1fr;
+}
+}
+@media (max-width: 640px) {
+:root {
+--header-h: 84px;
+}
+.brand img {
+width: min(156px, 42vw);
+}
+.metrics-grid,
+.focus-grid,
+.insight-grid,
+.credential-grid {
+grid-template-columns: 1fr;
+}
+.private-room-panel__proof:not(.private-room-panel__proof--side) {
+grid-template-columns: 1fr;
+}
+body {
+padding-bottom: var(--mobile-cta-h);
+}
+}
+
+.scroll-reveal {
+opacity: 0;
+transform: translateY(28px);
+transition:
+  opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+  transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+will-change: opacity, transform;
+}
+.scroll-reveal--visible {
+opacity: 1;
+transform: translateY(0);
+}
+.scroll-reveal-stagger > .scroll-reveal-item {
+opacity: 0;
+transform: translateY(22px);
+transition:
+  opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+  transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item {
+opacity: 1;
+transform: translateY(0);
+}
+.scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(1) { transition-delay: 0ms; }
+.scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(2) { transition-delay: 90ms; }
+.scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(3) { transition-delay: 180ms; }
+.scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(4) { transition-delay: 270ms; }
+.scroll-reveal-stagger.scroll-reveal--visible > .scroll-reveal-item:nth-child(5) { transition-delay: 360ms; }
+@media (prefers-reduced-motion: reduce) {
+.scroll-reveal,
+.scroll-reveal-stagger > .scroll-reveal-item {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+}
+
+  </style>
+  {{ standard_header_includes }}
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true" style="width:0;opacity:0"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Intersection Capital home">
+        <img src="https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp" alt="Intersection Capital" width="196" height="64" />
+      </a>
+      <nav class="desktop-nav" aria-label="Page sections">
+        <a href="#proof" data-scroll-to="proof">Proof</a>
+        <a href="#value" data-scroll-to="value">What You'll Learn</a>
+        <a href="#approach" data-scroll-to="approach">Approach</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="btn btn-primary" data-open-modal>Reserve Your Seat</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-dark" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow hero-glow--gold"></div>
+        <div class="hero-glow hero-glow--blue"></div>
+        <div class="market-grid"></div>
+        <div class="signal-line signal-line-a"></div>
+        <div class="signal-line signal-line-b"></div>
+      </div>
+      <div class="container hero-layout">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker-row" data-scroll-reveal data-scroll-reveal-delay="0">
+            <p class="eyebrow">Live webinar · Thursday, June 4 at 12:00 noon PT</p>
+            <span>No replay</span>
+          </div>
+          <p class="eyebrow hero-audience" data-scroll-reveal data-scroll-reveal-delay="40">For accredited investors</p>
+          <h1 id="hero-title" data-scroll-reveal data-scroll-reveal-delay="80">Finding Winners</h1>
+          <div class="hero-lede-wrap" data-scroll-reveal data-scroll-reveal-delay="160">
+            <div class="hero-lede-glow" aria-hidden="true"></div>
+            <p class="hero-lede">This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.</p>
+          </div>
+          <div class="hero-cta" data-scroll-reveal data-scroll-reveal-delay="240">
+            <button type="button" class="btn btn-primary btn-large" data-open-modal>Reserve Your Seat</button>
+            <a href="#value" class="btn btn-secondary btn-large" data-scroll-to="value">What You'll Learn</a>
+          </div>
+          <div class="invite-note" data-scroll-reveal data-scroll-reveal-delay="320">
+            <strong>This webinar is for:</strong>
+            <ul>
+              <li>Investors looking to find private-market deals</li>
+              <li>Operators and founders deploying personal capital</li>
+              <li>Private Equity professionals</li>
+              <li>People who want a repeatable evaluation framework — not stock tips</li>
+            </ul>
+          </div>
+
+          <article class="private-room-panel private-room-panel--in-copy" data-scroll-reveal data-scroll-reveal-delay="200">
+            <div class="private-room-panel__copy">
+              <span class="private-room-panel__label">Inside the session</span>
+              <h2>What we'll cover</h2>
+              <ul>
+                <li>How the $120M position came together</li>
+                <li>What makes a private company worth real attention</li>
+                <li>A live deal walkthrough and time for questions</li>
+              </ul>
+            </div>
+            <div class="private-room-panel__proof private-room-panel__proof--side">
+              <div>
+                <span>Format</span>
+                <strong>LIVE. (no recording)</strong>
+              </div>
+              <div>
+                <span>Session</span>
+                <strong>June 4 · <span class="nowrap">12:00 noon PT</span></strong>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="registration-panel" data-scroll-reveal data-scroll-reveal-delay="120">
+          <article class="media-card">
+            <div class="video-frame">
+              <iframe
+                src="https://player.vimeo.com/video/1195793478?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
+                title="Finding Winners"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="media-overlay">
+              <span>oren klaff</span>
+              <strong>Finding Winners</strong>
+            </div>
+          </article>
+
+          <article class="form-card" id="register">
+            <p class="form-kicker">free webinar</p>
+            <h2>Finding Winners Webinar</h2>
+            <p>Thursday, June 4 · 12:00 noon PT. Join live for the deal walkthrough and discussion. No replay will be sent after the session.</p>
+            <div class="hs-form-frame" data-region="na2" data-form-id="6a78941d-dd57-4227-a0c7-545f1d91c29f" data-portal-id="50180818"></div>
+            <p class="fineprint">This is a free live educational webinar. No recording will be distributed. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.</p>
+          </article>
+        </aside>
+
+      </div>
+      </div>
+    </section>
+
+    <section id="proof" class="proof-band section-dark" aria-label="Track record">
+      <div class="container metrics-grid" data-scroll-reveal="stagger">
+        <article class="metric scroll-reveal-item">
+          <span data-count-up="$120M" data-count-delay="0">$0M</span>
+          <p>Private-company position built</p>
+        </article>
+        <article class="metric scroll-reveal-item">
+          <span data-count-up="$50M+" data-count-delay="120">$0M+</span>
+          <p>Capital raised through relationships</p>
+        </article>
+        <article class="metric scroll-reveal-item">
+          <span data-count-up="400+" data-count-delay="240">0+</span>
+          <p>Investor relationships</p>
+        </article>
+        <article class="metric scroll-reveal-item">
+          <span data-count-up="5×" data-count-delay="360">0×</span>
+          <p>Target return profile discussed</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-light logos-section" aria-labelledby="work-title">
+      <div class="container focus-band">
+        <div class="focus-band__header" data-scroll-reveal>
+          <div>
+            <p class="section-label">A few things we'll touch</p>
+            <h2 id="work-title">This is how I share my work with 400+ current investors</h2>
+          </div>
+        </div>
+        <div class="work-list" data-scroll-reveal="stagger">
+          <article class="work-row scroll-reveal-item">
+            <span class="card-index">01</span>
+            <strong>Sourcing</strong>
+            <p>How I find deals before they hit the open market.</p>
+          </article>
+          <article class="work-row scroll-reveal-item">
+            <span class="card-index">02</span>
+            <strong>Pattern recognition</strong>
+            <p>What I look for in a winner that everyone else misses.</p>
+          </article>
+          <article class="work-row scroll-reveal-item">
+            <span class="card-index">03</span>
+            <strong>How Much to Invest</strong>
+            <p>How I price risk, time entries, and project exit.</p>
+          </article>
+          <article class="work-row scroll-reveal-item">
+            <span class="card-index">04</span>
+            <strong>400+ investors</strong>
+            <p>I share my work with 400+ current investors and we do deals together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="value" class="section section-light" aria-labelledby="value-title">
+      <div class="container">
+        <div class="split-intro split-intro--stacked" data-scroll-reveal>
+          <div class="intro-copy">
+            <h2 id="value-title">What you'll learn</h2>
+            <p class="intro-subhead">A practical look at how private-market conviction gets built.</p>
+            <p class="intro-text">I'll share the process I use to source, evaluate, and stay close to private companies before they hit institutional radar. The goal is to make the thinking visible, not bury you in a polished deck.</p>
+          </div>
+        </div>
+        <div class="insight-grid" data-scroll-reveal="stagger">
+          <article class="insight-card scroll-reveal-item">
+            <span class="card-index">01</span>
+            <h3>How the position was built</h3>
+            <p>The sourcing path, relationship network, and diligence work behind a $120M private-company position.</p>
+          </article>
+          <article class="insight-card scroll-reveal-item">
+            <span class="card-index">02</span>
+            <h3>What catches my attention</h3>
+            <p>The traits I look for before a company becomes widely talked about: customer demand, execution quality, management depth, and a credible path to liquidity.</p>
+          </article>
+          <article class="insight-card scroll-reveal-item">
+            <span class="card-index">03</span>
+            <h3>A live deal walkthrough</h3>
+            <p>A current opportunity walkthrough designed to show the decision process while the information is still useful.</p>
+          </article>
+          <article class="insight-card scroll-reveal-item">
+            <span class="card-index">04</span>
+            <h3>How to think about access</h3>
+            <p>Why private-market edge often comes from relationships, timing, and judgment rather than another generic allocation model.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section section-dark speaker-section" aria-labelledby="approach-title">
+      <div class="container speaker-layout">
+        <div class="speaker-visual" data-scroll-reveal>
+          <div class="portrait-frame">
+            <img src="https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Oren%20-%20Headshots/L1010305-2.jpg" alt="Oren Klaff, speaker" width="640" height="800" loading="lazy" />
+          </div>
+          <aside class="credential-card">
+            <span>Track record</span>
+            <strong>$120M position</strong>
+            <p>Built through private-company access, operator diligence, and concentrated conviction.</p>
+          </aside>
+        </div>
+        <div class="speaker-copy" data-scroll-reveal data-scroll-reveal-delay="120">
+          <p class="section-label">The approach</p>
+          <h2 id="approach-title">Learn the process 400+ investors used to invest $50 million</h2>
+          <p>The focus is on businesses with tangible demand, capable teams, and a reason to believe value can compound before the broader market notices.</p>
+          <div class="credential-grid" data-scroll-reveal="stagger">
+            <div class="scroll-reveal-item">
+              <strong>Real businesses</strong>
+              <span>Manufacturing businesses with real, tangible assets.</span>
+            </div>
+            <div class="scroll-reveal-item">
+              <strong>High-quality deals</strong>
+              <span>Businesses with real demand, not just a market story.</span>
+            </div>
+            <div class="scroll-reveal-item">
+              <strong>Proven operators</strong>
+              <span>Teams with evidence of execution and a credible plan.</span>
+            </div>
+            <div class="scroll-reveal-item">
+              <strong>Built-in off-ramps</strong>
+              <span>Thoughtful attention to liquidity path from the start.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-warm" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="split-intro" data-scroll-reveal>
+          <div class="intro-copy">
+            <p class="section-label">Why this session is different</p>
+            <h2 id="compare-title">Less market theater. More Decision Making on Actual Deals.</h2>
+          </div>
+          <p class="intro-text">This is not meant to be a broad market outlook. It is a closer look at how opportunities are sourced, filtered, and discussed before they become obvious.</p>
+        </div>
+        <div class="comparison-grid" data-scroll-reveal="stagger">
+          <article class="comparison-card muted scroll-reveal-item">
+            <h3>What this is not</h3>
+            <ul>
+              <li>A generic macro webinar</li>
+              <li>A stale recording repackaged as urgency</li>
+              <li>A public stock pitch</li>
+              <li>A broad allocation lecture</li>
+            </ul>
+          </article>
+          <article class="comparison-card premium scroll-reveal-item">
+            <h3>What you'll get</h3>
+            <ul>
+              <li>The thinking behind a real private-company position</li>
+              <li>A current opportunity walkthrough</li>
+              <li>Specific diligence questions to ask earlier</li>
+              <li>Live context you can't get from a replay</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section-dark" aria-labelledby="cta-title">
+      <div class="container cta-layout" data-scroll-reveal>
+        <div>
+          <p class="section-label">Join live</p>
+          <h2 id="cta-title">Be in the room while the analysis is still fresh.</h2>
+          <p>If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on June 4.</p>
+        </div>
+        <button type="button" class="btn btn-primary btn-large" data-open-modal>Reserve Your Seat</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <div class="footer-inner">
+        <div>
+          <img src="https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp" alt="Intersection Capital" width="210" height="68" />
+          <p>Finding Winners Webinar · Always live, never recorded.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="mailto:info@intersectioncapital.com">Contact</a>
+          <a href="#">Disclosures</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </nav>
+      </div>
+      <p class="footer-disclosure">Educational content only. Intersection Capital is not acting as your attorney, accountant, tax advisor, or financial advisor; nothing presented should be relied upon as legal, tax, accounting, investment, or financial advice.</p>
+    </div>
+  </footer>
+
+  <aside class="mobile-cta-bar" aria-label="Mobile registration">
+    <div class="container mobile-cta-inner">
+      <div>
+        <span>Live webinar</span>
+        <strong>June 4 · <span class="nowrap">12:00 noon PT</span></strong>
+      </div>
+      <button type="button" class="btn btn-primary" data-open-modal>Reserve</button>
+    </div>
+  </aside>
+
+  <div class="rsvp-modal" id="rsvp-modal" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
+    <div class="rsvp-modal__backdrop" aria-hidden="true"></div>
+    <div class="rsvp-modal__dialog">
+      <button type="button" class="rsvp-modal__close" aria-label="Close registration form">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <p class="form-kicker">Limited live attendance</p>
+      <h2 id="modal-title">Reserve Your Seat</h2>
+      <p>Request access to the live June 4 session. The webinar will not be distributed as a replay.</p>
+      <div class="hs-form-frame" data-region="na2" data-form-id="6a78941d-dd57-4227-a0c7-545f1d91c29f" data-portal-id="50180818"></div>
+      <p class="fineprint">Educational webinar only. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.</p>
+    </div>
+  </div>
+
+  <noscript>
+    <p class="noscript container">JavaScript is required for the registration modal. Use the form in the hero section or email <a href="mailto:info@intersectioncapital.com">info@intersectioncapital.com</a>.</p>
+  </noscript>
+
+  <script src="https://js-na2.hsforms.net/forms/embed/50180818.js" defer></script>
+  <script>
+(function () {
+  "use strict";
+
+  var LOGO_URL =
+    "https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp";
+
+  /** HubSpot form embed — handled by portal script + .hs-form-frame data attributes */
+
+  var modal = document.getElementById("rsvp-modal");
+  var progressBar = document.querySelector(".scroll-progress");
+  var mobileCta = document.querySelector(".mobile-cta-bar");
+
+  function scrollToId(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function openModal() {
+    if (!modal) return;
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    var closeBtn = modal.querySelector(".rsvp-modal__close");
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  function onScroll() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    var progress = docHeight > 0 ? scrollTop / docHeight : 0;
+
+    if (progressBar) {
+      progressBar.style.width = progress * 100 + "%";
+      progressBar.style.opacity = String(Math.min(progress * 1.2, 0.85));
+    }
+
+    if (mobileCta) {
+      var show = scrollTop > window.innerHeight * 0.75;
+      mobileCta.classList.toggle("is-visible", show);
+    }
+  }
+
+  function bindModalTriggers() {
+    document.querySelectorAll("[data-open-modal]").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    if (modal) {
+      modal
+        .querySelector(".rsvp-modal__backdrop")
+        ?.addEventListener("click", closeModal);
+      modal
+        .querySelector(".rsvp-modal__close")
+        ?.addEventListener("click", closeModal);
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeModal();
+    });
+  }
+
+  function bindSmoothNav() {
+    document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        var target = link.getAttribute("data-scroll-to");
+        if (!target) return;
+        e.preventDefault();
+        scrollToId(target);
+      });
+    });
+  }
+
+  function initScrollReveal() {
+    var nodes = document.querySelectorAll("[data-scroll-reveal]");
+    if (!nodes.length) return;
+
+    var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      nodes.forEach(function (node) {
+        node.classList.add("scroll-reveal--visible");
+      });
+      return;
+    }
+
+    function reveal(node) {
+      var delay = Number(node.getAttribute("data-scroll-reveal-delay") || 0);
+      window.setTimeout(function () {
+        node.classList.add("scroll-reveal--visible");
+      }, delay);
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          reveal(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+    );
+
+    nodes.forEach(function (node) {
+      var isStagger = node.getAttribute("data-scroll-reveal") === "stagger";
+      node.classList.add(isStagger ? "scroll-reveal-stagger" : "scroll-reveal");
+
+      if (node.getBoundingClientRect().top < window.innerHeight * 0.92) {
+        reveal(node);
+      } else {
+        observer.observe(node);
+      }
+    });
+  }
+
+  function initCountUp() {
+    var nodes = document.querySelectorAll("[data-count-up]");
+    if (!nodes.length) return;
+
+    var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function parseMetric(value) {
+      var match = String(value).trim().match(/^([^\d]*)([\d.]+)(.*)$/);
+      if (!match) return null;
+      var numStr = match[2];
+      return {
+        prefix: match[1],
+        target: parseFloat(numStr),
+        suffix: match[3],
+        decimals: numStr.indexOf(".") > -1 ? numStr.split(".")[1].length : 0,
+      };
+    }
+
+    function formatMetric(parsed, current) {
+      var n =
+        parsed.decimals > 0 ? current.toFixed(parsed.decimals) : String(Math.round(current));
+      return parsed.prefix + n + parsed.suffix;
+    }
+
+    nodes.forEach(function (node) {
+      var targetValue = node.getAttribute("data-count-up");
+      if (!targetValue) return;
+      var parsed = parseMetric(targetValue);
+      if (!parsed) return;
+
+      if (prefersReduced) {
+        node.textContent = targetValue;
+        return;
+      }
+
+      var delay = Number(node.getAttribute("data-count-delay") || 0);
+      var duration = 1600;
+      var started = false;
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || started) return;
+            started = true;
+            observer.unobserve(node);
+
+            window.setTimeout(function () {
+              var startTime = 0;
+              function step(now) {
+                if (!startTime) startTime = now;
+                var t = Math.min((now - startTime) / duration, 1);
+                var eased = 1 - Math.pow(1 - t, 3);
+                node.textContent = formatMetric(parsed, parsed.target * eased);
+                if (t < 1) requestAnimationFrame(step);
+              }
+              requestAnimationFrame(step);
+            }, delay);
+          });
+        },
+        { threshold: 0.35, rootMargin: "0px 0px -5% 0px" },
+      );
+
+      observer.observe(node);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    bindModalTriggers();
+    bindSmoothNav();
+    initScrollReveal();
+    initCountUp();
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  });
+
+  window.FindingWinnersWebinar = {
+    openModal: openModal,
+    closeModal: closeModal,
+    scrollToId: scrollToId,
+    logoUrl: LOGO_URL,
+  };
+})();
+
+  </script>
+  {{ standard_footer_includes }}
+</body>
+</html>
