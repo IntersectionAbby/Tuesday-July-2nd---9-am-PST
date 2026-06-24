@@ -147,7 +147,7 @@ export default function Index() {
                   FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80" style={{ fontSize: '24px' }}>
-                  Beyond "Game of Money" is FINDING WINNERS. Be the first to see it.&nbsp;
+                  Go beyond "Game of Money" to FINDING WINNERS. Be the first to see it.&nbsp;
                 </h1>
 
                 {/* Lede */}
@@ -157,7 +157,7 @@ export default function Index() {
                     aria-hidden
                   />
                   <p className="relative text-2xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-[1.65rem] md:text-3xl lg:text-[2.125rem]">
-                    By the time you hear about most private companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight. This is the breakdown of one real deal is on the front pages: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live. Nothing recorded.
+                    By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight. This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
                   </p>
                 </div>
 
@@ -208,7 +208,7 @@ export default function Index() {
                     <ul className="mt-3 space-y-2.5">
                       <li className="relative pl-6 text-sm leading-relaxed text-text/72">
                         <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
-                        How the $120M position came together
+                        Top 30 Priva
                       </li>
                       <li className="relative pl-6 text-sm leading-relaxed text-text/72">
                         <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
