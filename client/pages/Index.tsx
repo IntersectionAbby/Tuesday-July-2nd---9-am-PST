@@ -144,10 +144,10 @@ export default function Index() {
 
                 {/* Headline */}
                 <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
-                  For accredited investors
+                  FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80">
-                  Finding Winners
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80" style={{ fontSize: '24px' }}>
+                  Go beyond "Game of Money" to FINDING WINNERS. Be the first to see it.&nbsp;
                 </h1>
 
                 {/* Lede */}
@@ -157,7 +157,7 @@ export default function Index() {
                     aria-hidden
                   />
                   <p className="relative text-2xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-[1.65rem] md:text-3xl lg:text-[2.125rem]">
-                    This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.
+                    By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight. This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
                   </p>
                 </div>
 
@@ -208,7 +208,7 @@ export default function Index() {
                     <ul className="mt-3 space-y-2.5">
                       <li className="relative pl-6 text-sm leading-relaxed text-text/72">
                         <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
-                        How the $120M position came together
+                        Top 30 Private Companies in America
                       </li>
                       <li className="relative pl-6 text-sm leading-relaxed text-text/72">
                         <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
@@ -287,10 +287,10 @@ export default function Index() {
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4" data-scroll-reveal="stagger">
               {[
-                { value: '$120M', label: 'Private-company position built' },
-                { value: '$50M+', label: 'Capital raised through relationships' },
-                { value: '400+', label: 'Investor relationships' },
-                { value: '5×', label: 'Target return profile discussed' },
+                { value: '$5B rev', label: 'Private-company with real revenues' },
+                { value: '$20B+', label: 'Capital raised through relationships' },
+                { value: 'A+', label: 'Management Team' },
+                { value: '60%+', label: 'YoY Growth' },
               ].map((metric, i) => (
                 <div key={i} className="scroll-reveal-item bg-gradient-to-b from-white/035 to-white/012 p-8 md:p-10">
                   <CountUpMetric
@@ -371,10 +371,10 @@ export default function Index() {
                 What you'll learn
               </h2>
               <p className="serif max-w-2xl text-2xl md:text-3xl font-semibold text-dark-text leading-snug">
-                A practical look at how private-market conviction gets built.
+                Single Deal Focus: practical look at how private-market conviction about a single deal gets built.
               </p>
               <p className="max-w-2xl text-base md:text-lg text-dark-muted leading-relaxed">
-                I'll share the process I use to source, evaluate, and stay close to private companies before they hit institutional radar. The goal is to make the thinking visible, not bury you in a polished deck.
+                I'll share the process I use to source, evaluate, and stay close to private companies. The goal is to make the thinking visible, not bury you in a polished deck.
               </p>
             </div>
 
@@ -383,7 +383,7 @@ export default function Index() {
                 {
                   num: '01',
                   title: 'How the position was built',
-                  desc: 'The sourcing path, relationship network, and diligence work behind a $120M private-company position.',
+                  desc: 'The sourcing path, relationship network, and diligence work that goes into identifying a company.',
                 },
                 {
                   num: '02',
@@ -469,8 +469,8 @@ export default function Index() {
 
                 <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2" data-scroll-reveal="stagger">
                   {[
-                    { title: 'Real businesses', desc: 'Manufacturing businesses with real, tangible assets.' },
-                    { title: 'High-quality deals', desc: 'Businesses with real demand, not just a market story.' },
+                    { title: 'Exit Strategies', desc: 'Manufacturing or Software businesses with real, tangible assets.' },
+                    { title: 'More Demand than Supply', desc: 'Businesses with real demand, not just a market story.' },
                     { title: 'Proven operators', desc: 'Teams with evidence of execution and a credible plan.' },
                     { title: 'Built-in off-ramps', desc: 'Thoughtful attention to liquidity path from the start.' },
                   ].map((cred, i) => (
@@ -511,10 +511,10 @@ export default function Index() {
                 </h3>
                 <ul className="mt-6 space-y-3">
                   {[
-                    'A generic macro webinar',
-                    'A stale recording repackaged as urgency',
-                    'A public stock pitch',
-                    'A broad allocation lecture',
+                    'Not a generic "intro level" webinar',
+                    'Not "Last Years" Presentation&nbsp;',
+                    'Not a public stock pitch',
+                    'Not a wealth management lecture',
                   ].map((item, i) => (
                     <li key={i} className="relative pl-6 text-sm text-dark-muted">
                       <span className="absolute left-0 top-1.5 h-2.5 w-2.5 rounded-full border border-gold/70" />
