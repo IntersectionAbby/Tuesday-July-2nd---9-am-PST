@@ -135,7 +135,7 @@ export default function Index() {
                 {/* Kicker */}
                 <div className="flex flex-wrap items-center gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
                   <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
-                    Live webinar · Thursday, June 4 at 12:00 noon PT
+                    Live webinar · Tuesday, July 2 at 9:00 AM PST
                   </p>
                   <span className="rounded-full border border-gold-2/42 bg-gradient-to-br from-gold-2/18 to-gold/6 px-2.5 py-1.5 text-xs font-black uppercase tracking-wider text-text/78 shadow-inner">
                     No replay
@@ -230,7 +230,7 @@ export default function Index() {
                     <div className="flex flex-col justify-center gap-1.5 px-4 py-4 sm:px-5 sm:py-5">
                       <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Session</span>
                       <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
-                        June 4 · <span className="nowrap">12:00 noon PT</span>
+                        July 2 · <span className="nowrap">9:00 AM PST</span>
                       </strong>
                     </div>
                   </div>
@@ -268,7 +268,7 @@ export default function Index() {
                     Finding Winners Webinar
                   </h2>
                   <p className="mt-3 text-sm text-text/68 leading-relaxed">
-                    Thursday, June 4 · 12:00 noon PT. Join live for the deal walkthrough and discussion. No replay will be sent after the session.
+                    Tuesday, July 2 · 9:00 AM PST. Join live for the deal walkthrough and discussion. No replay will be sent after the session.
                   </p>
 
                   <HubSpotFormFrame className="mt-4" />
@@ -558,7 +558,7 @@ export default function Index() {
                   Be in the room while the analysis is still fresh.
                 </h2>
                 <p className="mt-4 text-base text-text/68 leading-relaxed">
-                  If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on June 4.
+                  If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on Tuesday, July 2 at 9:00 AM PST.
                 </p>
               </div>
               <button
@@ -612,7 +612,7 @@ export default function Index() {
                 Live webinar
               </span>
               <strong className="block text-sm text-text">
-                June 4 · <span className="nowrap">12:00 noon PT</span>
+                July 2 · <span className="nowrap">9:00 AM PST</span>
               </strong>
             </div>
             <button
@@ -650,7 +650,7 @@ export default function Index() {
                 Reserve Your Seat
               </h2>
               <p className="mt-3 text-sm text-text/64 leading-relaxed">
-                Request access to the live June 4 session. The webinar will not be distributed as a replay.
+                Request access to the live Tuesday, July 2 session at 9:00 AM PST. The webinar will not be distributed as a replay.
               </p>
 
               <HubSpotFormFrame className="mt-8 rounded-lg border border-white/10 bg-white/5 p-6" />
