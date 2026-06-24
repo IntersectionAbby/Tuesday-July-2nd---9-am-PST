@@ -10,11 +10,17 @@ type CountUpMetricProps = {
 export default function CountUpMetric({ value, className = '', delay = 0 }: CountUpMetricProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const parsed = useMemo(() => parseMetricValue(value), [value]);
-  const [text, setText] = useState(() => formatMetric(parsed, 0));
+  const canAnimate = /\d/.test(value);
+  const [text, setText] = useState(() => (canAnimate ? formatMetric(parsed, 0) : value));
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    if (!canAnimate) {
+      setText(value);
+      return;
+    }
 
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) {
@@ -40,7 +46,7 @@ export default function CountUpMetric({ value, className = '', delay = 0 }: Coun
       observer.disconnect();
       cleanup();
     };
-  }, [value, parsed, delay]);
+  }, [value, parsed, delay, canAnimate]);
 
   return (
     <span ref={ref} className={className}>

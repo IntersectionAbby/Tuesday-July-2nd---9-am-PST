@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
-const HUBSPOT_EMBED_SCRIPT =
-  'https://js-na2.hsforms.net/forms/embed/50180818.js';
+const HUBSPOT_EMBED_SCRIPT = 'https://link.msgsndr.com/js/form_embed.js';
 
 let scriptPromise: Promise<void> | null = null;
 
@@ -19,7 +18,7 @@ function loadHubSpotFormScript() {
         return;
       }
       existing.addEventListener('load', () => resolve(), { once: true });
-      existing.addEventListener('error', () => reject(new Error('HubSpot form script failed to load')), {
+      existing.addEventListener('error', () => reject(new Error('LeadConnector form script failed to load')), {
         once: true,
       });
       return;
@@ -32,7 +31,7 @@ function loadHubSpotFormScript() {
       script.dataset.loaded = 'true';
       resolve();
     };
-    script.onerror = () => reject(new Error('HubSpot form script failed to load'));
+    script.onerror = () => reject(new Error('LeadConnector form script failed to load'));
     document.body.appendChild(script);
   });
 
@@ -42,7 +41,7 @@ function loadHubSpotFormScript() {
 export function useHubSpotFormScript() {
   useEffect(() => {
     loadHubSpotFormScript().catch(() => {
-      // HubSpot embed is optional for local preview; hero copy still works.
+      // Form embed is optional for local preview; hero copy still works.
     });
   }, []);
 }

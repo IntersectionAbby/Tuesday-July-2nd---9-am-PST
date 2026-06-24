@@ -30,8 +30,8 @@ html = html
     '<meta property="og:url" content="https://intersectioncapital.com/finding-winners-webinar" />\n  <meta property="og:type" content="website" />',
   )
   .replace(
-    '<link rel="dns-prefetch" href="https://js-na2.hsforms.net" />',
-    '<link rel="dns-prefetch" href="https://js-na2.hsforms.net" />\n  <link rel="dns-prefetch" href="https://js.hs-scripts.com" />',
+    '<link rel="dns-prefetch" href="https://link.msgsndr.com" />',
+    '<link rel="dns-prefetch" href="https://link.msgsndr.com" />',
   )
   .replace(
     '{{ require_css(get_asset_url("../css/finding-winners-webinar.css")) }}',

@@ -1,10 +1,9 @@
 (function () {
   "use strict";
 
-  var LOGO_URL =
-    "https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp";
+  var LOGO_URL = "/oren-logo.png";
 
-  /** HubSpot form embed — handled by portal script + .hs-form-frame data attributes */
+  /** LeadConnector form embed — handled by iframe + form_embed.js */
 
   var modal = document.getElementById("rsvp-modal");
   var progressBar = document.querySelector(".scroll-progress");

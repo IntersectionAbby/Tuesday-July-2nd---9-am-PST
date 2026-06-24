@@ -1,21 +1,18 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 import { useHubSpotFormScript } from '@/hooks/use-hubspot-form-script';
 import HubSpotFormFrame from '@/components/HubSpotFormFrame';
 import CountUpMetric from '@/components/CountUpMetric';
 
-const LOGO_URL =
-  'https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp';
+const LOGO_URL = '/oren-logo.png';
 const SPEAKER_IMAGE =
   'https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Oren%20-%20Headshots/L1010305-2.jpg';
 const VIMEO_EMBED_URL =
   'https://player.vimeo.com/video/1195793478?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1';
 
 export default function Index() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showMobileCta, setShowMobileCta] = useState(false);
 
@@ -37,17 +34,6 @@ export default function Index() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isModalOpen]);
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -71,7 +57,7 @@ export default function Index() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/82 backdrop-blur-[18px]">
         <div className="mx-auto flex items-center justify-between gap-8 px-6 py-3 md:px-8 lg:px-12" style={{ maxWidth: '1320px' }}>
           <a href="#top" className="flex-0">
-            <img src={LOGO_URL} alt="Intersection Capital" className="h-24 w-auto" />
+            <img src={LOGO_URL} alt="Oren Klaff" className="h-14 w-auto sm:h-16 md:h-20" />
           </a>
 
           {/* Desktop nav */}
@@ -89,7 +75,7 @@ export default function Index() {
 
           {/* CTA Button */}
           <button
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => scrollTo('register')}
             className="flex-0 inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-5 py-3 text-sm font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-1px]"
           >
             Reserve Your Seat
@@ -130,7 +116,7 @@ export default function Index() {
           <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-stretch lg:gap-10">
               {/* Copy side */}
-              <div className="flex h-full min-h-0 flex-col justify-between gap-4 lg:min-h-full lg:gap-5">
+              <div className="flex h-full min-h-0 flex-col justify-center gap-5 lg:min-h-full lg:gap-6">
                 <div className="flex flex-col gap-4 lg:gap-5">
                 {/* Kicker */}
                 <div className="flex flex-wrap items-center gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
@@ -146,8 +132,10 @@ export default function Index() {
                 <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
                   FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[0.95] tracking-tight" data-scroll-reveal data-scroll-reveal-delay="80" style={{ fontSize: '24px' }}>
-                  Go beyond "Game of Money" to FINDING WINNERS. Be the first to see it.&nbsp;
+                <h1 className="text-3xl font-bold text-text leading-[1.08] tracking-tight md:text-4xl lg:text-5xl xl:text-6xl" data-scroll-reveal data-scroll-reveal-delay="80">
+                  <span className="block">Go beyond "Game of Money"</span>
+                  <span className="block">to FINDING WINNERS.</span>
+                  <span className="block">Be the first to see it.</span>
                 </h1>
 
                 {/* Lede */}
@@ -156,7 +144,7 @@ export default function Index() {
                     className="hero-lede-glow pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 sm:-inset-x-6 sm:-inset-y-4"
                     aria-hidden
                   />
-                  <p className="relative text-2xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-[1.65rem] md:text-3xl lg:text-[2.125rem]">
+                  <p className="relative text-xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-2xl md:text-[1.7rem] lg:text-[1.95rem]">
                     By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight. This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
                   </p>
                 </div>
@@ -164,7 +152,7 @@ export default function Index() {
                 {/* CTAs */}
                 <div className="flex flex-wrap gap-2.5" data-scroll-reveal data-scroll-reveal-delay="240">
                   <button
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => scrollTo('register')}
                     className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-5 py-3 text-base font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-2px]"
                   >
                     Reserve Your Seat
@@ -178,11 +166,11 @@ export default function Index() {
                 </div>
 
                 {/* Invite note */}
-                <div className="border-l-2 border-gold bg-gradient-to-r from-gold/14 to-gold/2 p-4 md:p-4" data-scroll-reveal data-scroll-reveal-delay="320">
+                <div className="border-l-2 border-gold bg-gradient-to-r from-gold/14 to-gold/2 p-4 md:p-4 lg:py-3" data-scroll-reveal data-scroll-reveal-delay="320">
                   <strong className="block text-sm font-black uppercase tracking-wider text-text">
                     This webinar is for:
                   </strong>
-                  <ul className="mt-4 space-y-2 text-sm text-text/62 leading-relaxed">
+                  <ul className="mt-3 space-y-1.5 text-sm text-text/62 leading-relaxed">
                     <li>Investors looking to find private-market deals</li>
                     <li>Operators and founders deploying personal capital&nbsp;</li>
                     <li>Private Equity professionals</li>
@@ -190,50 +178,6 @@ export default function Index() {
                   </ul>
                 </div>
 
-                </div>
-
-                {/* Inside the session — bottom of left column */}
-                <div
-                  className="w-full overflow-hidden rounded-lg border border-white/13 bg-gradient-to-br from-gold-2/13 to-transparent shadow-lg backdrop-blur-sm md:grid md:grid-cols-[1fr_auto] md:items-stretch"
-                  data-scroll-reveal
-                  data-scroll-reveal-delay="200"
-                >
-                  <div className="p-5 md:p-6">
-                    <span className="text-xs font-black uppercase tracking-widest text-gold-2">
-                      Inside the session
-                    </span>
-                    <h2 className="serif mt-2 text-xl font-semibold leading-tight text-text md:text-2xl">
-                      What we'll cover
-                    </h2>
-                    <ul className="mt-3 space-y-2.5">
-                      <li className="relative pl-6 text-sm leading-relaxed text-text/72">
-                        <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
-                        Top 30 Private Companies in America
-                      </li>
-                      <li className="relative pl-6 text-sm leading-relaxed text-text/72">
-                        <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
-                        What makes a private company worth real attention
-                      </li>
-                      <li className="relative pl-6 text-sm leading-relaxed text-text/72">
-                        <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
-                        A live deal walkthrough and time for questions
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="grid grid-cols-2 divide-x divide-white/10 border-t border-white/10 bg-white/[0.06] md:grid-cols-1 md:divide-x-0 md:divide-y md:border-t-0 md:border-l md:min-w-[8.5rem] lg:min-w-[9.5rem]">
-                    <div className="flex flex-col justify-center gap-1.5 px-4 py-4 sm:px-5 sm:py-5">
-                      <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Format</span>
-                      <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
-                        LIVE. (no recording)
-                      </strong>
-                    </div>
-                    <div className="flex flex-col justify-center gap-1.5 px-4 py-4 sm:px-5 sm:py-5">
-                      <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Session</span>
-                      <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
-                        July 2 · <span className="nowrap">9:00 AM PST</span>
-                      </strong>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -260,7 +204,7 @@ export default function Index() {
                 </div>
 
                 {/* Form card */}
-                <div className="flex min-h-0 flex-1 flex-col rounded-lg border border-white/14 bg-gradient-to-br from-gold-2/12 to-transparent p-5 md:p-6 shadow-2xl backdrop-blur-sm">
+                <div id="register" className="flex min-h-0 flex-1 flex-col rounded-lg border border-white/14 bg-gradient-to-br from-gold-2/12 to-transparent p-5 md:p-6 shadow-2xl backdrop-blur-sm">
                   <p className="text-xs font-black uppercase tracking-widest text-gold-2">
                     free webinar
                   </p>
@@ -278,6 +222,53 @@ export default function Index() {
                   </p>
                 </div>
               </aside>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-ink py-10 md:py-14 border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
+            <div
+              className="w-full overflow-hidden rounded-lg border border-white/13 bg-gradient-to-br from-gold-2/13 to-transparent shadow-lg backdrop-blur-sm md:grid md:grid-cols-[1fr_auto] md:items-stretch"
+              data-scroll-reveal
+              data-scroll-reveal-delay="80"
+            >
+              <div className="p-6 md:p-8 lg:p-10">
+                <span className="text-xs font-black uppercase tracking-widest text-gold-2">
+                  Inside the session
+                </span>
+                <h2 className="serif mt-2 text-2xl font-semibold leading-tight text-text md:text-3xl">
+                  What we'll cover
+                </h2>
+                <ul className="mt-5 grid gap-3 md:grid-cols-3 md:gap-5">
+                  <li className="relative pl-6 text-sm leading-relaxed text-text/72 md:text-base">
+                    <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
+                    Top 30 Private Companies in America
+                  </li>
+                  <li className="relative pl-6 text-sm leading-relaxed text-text/72 md:text-base">
+                    <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
+                    What makes a private company worth real attention
+                  </li>
+                  <li className="relative pl-6 text-sm leading-relaxed text-text/72 md:text-base">
+                    <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-gold shadow-glow" />
+                    A live deal walkthrough and time for questions
+                  </li>
+                </ul>
+              </div>
+              <div className="grid grid-cols-2 divide-x divide-white/10 border-t border-white/10 bg-white/[0.06] md:min-w-[18rem] md:grid-cols-1 md:divide-x-0 md:divide-y md:border-l md:border-t-0 lg:min-w-[22rem]">
+                <div className="flex flex-col justify-center gap-1.5 px-5 py-5 md:px-7">
+                  <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Format</span>
+                  <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
+                    LIVE. (no recording)
+                  </strong>
+                </div>
+                <div className="flex flex-col justify-center gap-1.5 px-5 py-5 md:px-7">
+                  <span className="text-[11px] font-black uppercase tracking-[0.16em] text-gold-2 sm:text-xs">Session</span>
+                  <strong className="serif block text-lg leading-[1.05] text-text sm:text-xl lg:text-2xl">
+                    July 2 · <span className="nowrap">9:00 AM PST</span>
+                  </strong>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -346,15 +337,15 @@ export default function Index() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="scroll-reveal-item grid grid-cols-1 gap-4 border-b border-dark-text/14 py-8 md:grid-cols-3 md:gap-6"
+                  className="scroll-reveal-item grid grid-cols-1 gap-5 border-b border-dark-text/14 py-10 md:grid-cols-3 md:gap-8 lg:py-12"
                 >
-                  <span className="text-xs font-black uppercase tracking-wider text-gold/70">
+                  <span className="text-sm font-black uppercase tracking-wider text-gold/70 md:text-base">
                     {item.num}
                   </span>
-                  <strong className="serif text-xl md:text-2xl font-semibold text-dark-text leading-tight">
+                  <strong className="serif text-2xl font-semibold text-dark-text leading-tight md:text-3xl lg:text-4xl">
                     {item.title}
                   </strong>
-                  <p className="text-sm md:text-base text-dark-muted leading-relaxed">
+                  <p className="text-base text-dark-muted leading-relaxed md:text-lg lg:text-xl">
                     {item.desc}
                   </p>
                 </div>
@@ -562,7 +553,7 @@ export default function Index() {
                 </p>
               </div>
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => scrollTo('register')}
                 className="flex-shrink-0 inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-6 py-4 text-base font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-2px]"
               >
                 Reserve Your Seat
@@ -577,7 +568,7 @@ export default function Index() {
         <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
           <div className="flex flex-col gap-6 md:flex-row md:items-flex-start md:justify-between">
             <div>
-              <img src={LOGO_URL} alt="Intersection Capital" className="h-16 w-auto" />
+              <img src={LOGO_URL} alt="Oren Klaff" className="h-10 w-auto sm:h-12" />
               <p className="mt-2 text-sm text-text/46">
                 Finding Winners Webinar · Always live, never recorded.
               </p>
@@ -616,7 +607,7 @@ export default function Index() {
               </strong>
             </div>
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => scrollTo('register')}
               className="flex-shrink-0 inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-4 py-2.5 text-sm font-bold text-ink shadow-lg hover:shadow-xl transition-all"
             >
               Reserve
@@ -625,42 +616,6 @@ export default function Index() {
         </div>
       )}
 
-      {/* Modal — kept in DOM so HubSpot can embed the form */}
-      <div
-        className={`fixed inset-0 z-50 flex items-center justify-center p-4 ${isModalOpen ? '' : 'pointer-events-none invisible'}`}
-        aria-hidden={!isModalOpen}
-      >
-        <div
-          className={`absolute inset-0 bg-black/78 backdrop-blur-sm transition-opacity ${isModalOpen ? 'opacity-100' : 'opacity-0'}`}
-          onClick={() => setIsModalOpen(false)}
-        />
-          <div className="relative w-full max-w-lg rounded-2xl border border-white/14 bg-gradient-to-br from-ink-2 to-ink-3 p-6 md:p-10 shadow-2xl">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 text-text/82 hover:border-gold-2/42 hover:bg-white/10 hover:text-text transition-all"
-            >
-              <X size={24} />
-            </button>
-
-            <div className="max-w-sm">
-              <p className="text-xs font-black uppercase tracking-widest text-gold-2">
-                Limited live attendance
-              </p>
-              <h2 className="serif mt-3 text-3xl md:text-4xl font-semibold text-text leading-tight">
-                Reserve Your Seat
-              </h2>
-              <p className="mt-3 text-sm text-text/64 leading-relaxed">
-                Request access to the live Tuesday, July 2 session at 9:00 AM PST. The webinar will not be distributed as a replay.
-              </p>
-
-              <HubSpotFormFrame className="mt-8 rounded-lg border border-white/10 bg-white/5 p-6" />
-
-              <p className="mt-6 text-xs text-text/38 leading-relaxed">
-                Educational webinar only. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.
-              </p>
-            </div>
-          </div>
-      </div>
     </div>
   );
 }

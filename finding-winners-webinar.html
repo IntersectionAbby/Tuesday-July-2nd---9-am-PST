@@ -16,8 +16,11 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#080b0f" />
-  <link rel="dns-prefetch" href="https://js-na2.hsforms.net" />
-  <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+  <link rel="dns-prefetch" href="https://link.msgsndr.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;600;700&display=swap" rel="stylesheet" />
@@ -300,8 +303,8 @@ align-items: stretch;
 grid-column: 1;
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-gap: clamp(10px, 1.4vw, 16px);
+justify-content: center;
+gap: clamp(16px, 2vw, 28px);
 min-height: 100%;
 padding-top: 0;
 }
@@ -448,6 +451,13 @@ max-width: none;
 .hero-copy .invite-note {
 margin-top: 0;
 }
+.session-section {
+padding: clamp(44px, 5vw, 72px) 0;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.session-section .private-room-panel--full {
+margin-top: 0;
+}
 .hero-kicker-row {
 margin-bottom: 0;
 display: flex;
@@ -482,14 +492,17 @@ text-transform: uppercase;
 color: #7c6132;
 }
 .hero h1 {
-max-width: 780px;
+max-width: 720px;
 margin-top: 0;
 color: var(--text);
 font-family: var(--sans);
-font-size: clamp(3rem, 6vw, 5.75rem);
+font-size: clamp(2rem, 3.8vw, 3.9rem);
 font-weight: 750;
-line-height: 0.95;
+line-height: 1.08;
 letter-spacing: -0.02em;
+}
+.hero h1 span {
+display: block;
 }
 .hero-audience {
 margin: clamp(8px, 1.2vw, 14px) 0 clamp(4px, 0.8vw, 8px);
@@ -528,7 +541,7 @@ z-index: 1;
 margin-top: 0;
 max-width: none;
 color: var(--gold-2);
-font-size: clamp(1.35rem, 2.4vw, 2.125rem);
+font-size: clamp(1.25rem, 2vw, 1.95rem);
 font-weight: 650;
 line-height: 1.35;
 letter-spacing: -0.015em;
@@ -555,7 +568,7 @@ display: grid;
 gap: 4px;
 max-width: 560px;
 margin-top: 12px;
-padding: 14px 16px;
+padding: 12px 16px;
 border-left: 2px solid var(--gold);
 background: linear-gradient(90deg, rgba(198, 163, 106, 0.14), rgba(198, 163, 106, 0.02));
 }
@@ -572,8 +585,8 @@ line-height: 1.45;
 }
 .invite-note ul {
 display: grid;
-gap: 8px;
-margin-top: 10px;
+gap: 6px;
+margin-top: 8px;
 padding-left: 0;
 list-style: none;
 }
@@ -1365,20 +1378,23 @@ border-top: 1px solid var(--dark-line);
 .work-row {
 display: grid;
 grid-template-columns: minmax(0, 0.18fr) minmax(0, 0.34fr) minmax(0, 1fr);
-gap: clamp(16px, 3vw, 28px);
-padding: clamp(24px, 3vw, 34px) 0;
+gap: clamp(20px, 3.4vw, 36px);
+padding: clamp(36px, 4vw, 52px) 0;
 border-bottom: 1px solid var(--dark-line);
+}
+.work-row .card-index {
+font-size: clamp(0.875rem, 1.1vw, 1rem);
 }
 .work-row strong {
 color: var(--dark-text);
 font-family: var(--serif);
-font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+font-size: clamp(1.5rem, 2.8vw, 2.5rem);
 font-weight: 650;
 line-height: 1.12;
 }
 .work-row p {
 color: var(--dark-muted);
-font-size: 14px;
+font-size: clamp(1rem, 1.45vw, 1.25rem);
 line-height: 1.65;
 }
 @keyframes signalDrift {
@@ -1572,8 +1588,8 @@ transform: translateY(0);
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Intersection Capital home">
-        <img src="https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp" alt="Intersection Capital" width="196" height="64" />
+      <a href="#top" class="brand" aria-label="Oren Klaff home">
+        <img src="/oren-logo.png" alt="Oren Klaff" width="250" height="50" />
       </a>
       <nav class="desktop-nav" aria-label="Page sections">
         <a href="#proof" data-scroll-to="proof">Proof</a>
@@ -1581,7 +1597,7 @@ transform: translateY(0);
         <a href="#approach" data-scroll-to="approach">Approach</a>
       </nav>
       <div class="header-actions">
-        <button type="button" class="btn btn-primary" data-open-modal>Reserve Your Seat</button>
+        <button type="button" class="btn btn-primary" data-scroll-to="register">Reserve Your Seat</button>
       </div>
     </div>
   </header>
@@ -1602,14 +1618,18 @@ transform: translateY(0);
             <p class="eyebrow">Live webinar · Tuesday, July 2 at 9:00 AM PST</p>
             <span>No replay</span>
           </div>
-          <p class="eyebrow hero-audience" data-scroll-reveal data-scroll-reveal-delay="40">For accredited investors</p>
-          <h1 id="hero-title" data-scroll-reveal data-scroll-reveal-delay="80">Finding Winners</h1>
+          <p class="eyebrow hero-audience" data-scroll-reveal data-scroll-reveal-delay="40">FOR OK STONE INVESTORS - ALL NEW PRESENTATION</p>
+          <h1 id="hero-title" data-scroll-reveal data-scroll-reveal-delay="80">
+            <span>Go beyond "Game of Money"</span>
+            <span>to FINDING WINNERS.</span>
+            <span>Be the first to see it.</span>
+          </h1>
           <div class="hero-lede-wrap" data-scroll-reveal data-scroll-reveal-delay="160">
             <div class="hero-lede-glow" aria-hidden="true"></div>
             <p class="hero-lede">This webinar teaches accredited investors how to identify high-upside private companies before mainstream capital notices them - using a real $120M investment return as the live case study.</p>
           </div>
           <div class="hero-cta" data-scroll-reveal data-scroll-reveal-delay="240">
-            <button type="button" class="btn btn-primary btn-large" data-open-modal>Reserve Your Seat</button>
+            <button type="button" class="btn btn-primary btn-large" data-scroll-to="register">Reserve Your Seat</button>
             <a href="#value" class="btn btn-secondary btn-large" data-scroll-to="value">What You'll Learn</a>
           </div>
           <div class="invite-note" data-scroll-reveal data-scroll-reveal-delay="320">
@@ -1621,28 +1641,6 @@ transform: translateY(0);
               <li>People who want a repeatable evaluation framework — not stock tips</li>
             </ul>
           </div>
-
-          <article class="private-room-panel private-room-panel--in-copy" data-scroll-reveal data-scroll-reveal-delay="200">
-            <div class="private-room-panel__copy">
-              <span class="private-room-panel__label">Inside the session</span>
-              <h2>What we'll cover</h2>
-              <ul>
-                <li>How the $120M position came together</li>
-                <li>What makes a private company worth real attention</li>
-                <li>A live deal walkthrough and time for questions</li>
-              </ul>
-            </div>
-            <div class="private-room-panel__proof private-room-panel__proof--side">
-              <div>
-                <span>Format</span>
-                <strong>LIVE. (no recording)</strong>
-              </div>
-              <div>
-                <span>Session</span>
-                <strong>July 2 · <span class="nowrap">9:00 AM PST</span></strong>
-              </div>
-            </div>
-          </article>
         </div>
 
         <aside class="registration-panel" data-scroll-reveal data-scroll-reveal-delay="120">
@@ -1666,12 +1664,55 @@ transform: translateY(0);
             <p class="form-kicker">free webinar</p>
             <h2>Finding Winners Webinar</h2>
             <p>Tuesday, July 2 · 9:00 AM PST. Join live for the deal walkthrough and discussion. No replay will be sent after the session.</p>
-            <div class="hs-form-frame" data-region="na2" data-form-id="6a78941d-dd57-4227-a0c7-545f1d91c29f" data-portal-id="50180818"></div>
+            <iframe
+              class="hs-form-frame"
+              src="https://api.leadconnectorhq.com/widget/form/q1t9YHGh4x3jWhiFitgN"
+              style="width:100%;height:100%;border:none;border-radius:8px"
+              id="inline-q1t9YHGh4x3jWhiFitgN"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="7/2 Webinar Form"
+              data-height="434"
+              data-layout-iframe-id="inline-q1t9YHGh4x3jWhiFitgN"
+              data-form-id="q1t9YHGh4x3jWhiFitgN"
+              title="7/2 Webinar Form"
+            ></iframe>
             <p class="fineprint">This is a free live educational webinar. No recording will be distributed. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.</p>
           </article>
         </aside>
 
       </div>
+      </div>
+    </section>
+
+    <section class="section section-dark session-section" aria-labelledby="session-title">
+      <div class="container">
+        <article class="private-room-panel private-room-panel--full" data-scroll-reveal data-scroll-reveal-delay="80">
+          <div class="private-room-panel__copy">
+            <span class="private-room-panel__label">Inside the session</span>
+            <h2 id="session-title">What we'll cover</h2>
+            <ul>
+              <li>Top 30 Private Companies in America</li>
+              <li>What makes a private company worth real attention</li>
+              <li>A live deal walkthrough and time for questions</li>
+            </ul>
+          </div>
+          <div class="private-room-panel__proof private-room-panel__proof--strip">
+            <div>
+              <span>Format</span>
+              <strong>LIVE. (no recording)</strong>
+            </div>
+            <div>
+              <span>Session</span>
+              <strong>July 2 · <span class="nowrap">9:00 AM PST</span></strong>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -1840,7 +1881,7 @@ transform: translateY(0);
           <h2 id="cta-title">Be in the room while the analysis is still fresh.</h2>
           <p>If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on Tuesday, July 2 at 9:00 AM PST.</p>
         </div>
-        <button type="button" class="btn btn-primary btn-large" data-open-modal>Reserve Your Seat</button>
+        <button type="button" class="btn btn-primary btn-large" data-scroll-to="register">Reserve Your Seat</button>
       </div>
     </section>
   </main>
@@ -1849,7 +1890,7 @@ transform: translateY(0);
     <div class="container footer-stack">
       <div class="footer-inner">
         <div>
-          <img src="https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp" alt="Intersection Capital" width="210" height="68" />
+          <img src="/oren-logo.png" alt="Oren Klaff" width="210" height="42" />
           <p>Finding Winners Webinar · Always live, never recorded.</p>
         </div>
         <nav class="footer-links" aria-label="Footer">
@@ -1869,39 +1910,22 @@ transform: translateY(0);
         <span>Live webinar</span>
         <strong>July 2 · <span class="nowrap">9:00 AM PST</span></strong>
       </div>
-      <button type="button" class="btn btn-primary" data-open-modal>Reserve</button>
+      <button type="button" class="btn btn-primary" data-scroll-to="register">Reserve</button>
     </div>
   </aside>
-
-  <div class="rsvp-modal" id="rsvp-modal" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
-    <div class="rsvp-modal__backdrop" aria-hidden="true"></div>
-    <div class="rsvp-modal__dialog">
-      <button type="button" class="rsvp-modal__close" aria-label="Close registration form">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M18 6 6 18M6 6l12 12" />
-        </svg>
-      </button>
-      <p class="form-kicker">Limited live attendance</p>
-      <h2 id="modal-title">Reserve Your Seat</h2>
-      <p>Request access to the live Tuesday, July 2 session at 9:00 AM PST. The webinar will not be distributed as a replay.</p>
-      <div class="hs-form-frame" data-region="na2" data-form-id="6a78941d-dd57-4227-a0c7-545f1d91c29f" data-portal-id="50180818"></div>
-      <p class="fineprint">Educational webinar only. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.</p>
-    </div>
-  </div>
 
   <noscript>
     <p class="noscript container">JavaScript is required for the registration modal. Use the form in the hero section or email <a href="mailto:info@intersectioncapital.com">info@intersectioncapital.com</a>.</p>
   </noscript>
 
-  <script src="https://js-na2.hsforms.net/forms/embed/50180818.js" defer></script>
+  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
   <script>
 (function () {
   "use strict";
 
-  var LOGO_URL =
-    "https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Intersection-Capital-white-2-2048x667.webp";
+  var LOGO_URL = "/oren-logo.png";
 
-  /** HubSpot form embed — handled by portal script + .hs-form-frame data attributes */
+  /** LeadConnector form embed — handled by iframe + form_embed.js */
 
   var modal = document.getElementById("rsvp-modal");
   var progressBar = document.querySelector(".scroll-progress");
