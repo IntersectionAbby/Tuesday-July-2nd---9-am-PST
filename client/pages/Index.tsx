@@ -135,8 +135,7 @@ export default function Index() {
 
                 {/* Headline */}
                 <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
-                  <span className="block" style={{ fontSize: '25px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span>&nbsp;- introducing FINDING WINNERS&nbsp;-</span>
-                  <span className="block" style={{ fontSize: '28px' }}>Be the first to see it.</span>
+                  <span className="block" style={{ fontSize: '25px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span>&nbsp;- now introducing FINDING WINNERS</span>
                 </h1>
 
                 {/* Lede */}
