@@ -144,8 +144,8 @@ export default function Index() {
                     className="hero-lede-glow pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 sm:-inset-x-6 sm:-inset-y-4"
                     aria-hidden
                   />
-                  <p className="relative text-sm leading-[1] tracking-tight text-gold-2">
-                    By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight. This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
+                  <p className="relative text-sm leading-[1] tracking-tight text-gold-2" style={{ fontSize: '25px' }}>
+                    By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight.&nbsp;
                   </p>
                 </div>
 
