@@ -44,14 +44,6 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-ink overflow-x-hidden">
-      {/* Progress bar */}
-      <div
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-transparent via-gold-2 to-transparent shadow-lg z-50"
-        style={{
-          width: `${scrollProgress * 100}%`,
-          opacity: scrollProgress * 0.8,
-        }}
-      />
 
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/82 backdrop-blur-[18px]">
