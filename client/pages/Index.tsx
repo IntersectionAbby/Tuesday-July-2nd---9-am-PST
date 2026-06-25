@@ -158,14 +158,13 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="register" className="relative overflow-hidden border-y border-white/10 bg-[#080b0f] py-10 md:py-14">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-2/50 to-transparent" aria-hidden />
+        <section id="register" className="relative overflow-hidden bg-white py-10 md:py-14">
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
             <div className="relative overflow-hidden p-0">
-              <div className="min-h-[434px] overflow-hidden">
+              <div className="min-h-[434px] overflow-hidden bg-[#080b0f]">
                 <HubSpotFormFrame className="h-full min-h-[434px]" />
               </div>
-              <p className="mt-4 border-t border-white/10 pt-4 text-sm leading-relaxed text-text/46">
+              <p className="mt-4 pt-4 text-sm leading-relaxed text-dark-muted">
                 This is a free live educational webinar. No recording will be distributed. By registering you agree to receive communications from Intersection Capital. Unsubscribe at any time.
               </p>
             </div>
