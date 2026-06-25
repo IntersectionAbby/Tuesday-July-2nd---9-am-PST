@@ -129,7 +129,7 @@ export default function Index() {
                 </div>
 
                 {/* Headline */}
-                <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
+                <p className="mb-2 text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
                   FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
                 <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
