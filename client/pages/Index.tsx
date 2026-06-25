@@ -61,16 +61,10 @@ export default function Index() {
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center justify-center gap-6 text-xs font-semibold uppercase tracking-wider text-text/72 md:flex">
-            <a href="#proof" onClick={() => scrollTo('proof')} className="hover:text-text transition-colors">
-              Proof
-            </a>
-            <a href="#value" onClick={() => scrollTo('value')} className="hover:text-text transition-colors">
-              What You'll Learn
-            </a>
-            <a href="#approach" onClick={() => scrollTo('approach')} className="hover:text-text transition-colors">
-              Approach
-            </a>
+          <nav className="hidden items-center justify-center gap-3 text-xs font-semibold uppercase tracking-wider text-text/72 md:flex">
+            <p className="text-gold-2">
+              Live webinar · Thursday, June 4 at 12:00 noon PT
+            </p>
           </nav>
 
           {/* CTA Button */}
@@ -122,7 +116,7 @@ export default function Index() {
                 <div className="flex flex-col gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
                   <div className="flex flex-wrap items-center gap-2.5">
                     <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
-                      Live webinar · Tuesday, July 2 at 9:00 AM PST
+                      Live webinar · Thursday, June 4 at 12:00 noon PT
                     </p>
                     <span className="rounded-full border border-gold-2/42 bg-gradient-to-br from-gold-2/18 to-gold/6 px-2.5 py-1.5 text-xs font-black uppercase tracking-wider text-text/78 shadow-inner">
                       No replay
