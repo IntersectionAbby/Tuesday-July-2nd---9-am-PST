@@ -44,34 +44,13 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-ink overflow-x-hidden">
-      {/* Progress bar */}
-      <div
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-transparent via-gold-2 to-transparent shadow-lg z-50"
-        style={{
-          width: `${scrollProgress * 100}%`,
-          opacity: scrollProgress * 0.8,
-        }}
-      />
 
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/82 backdrop-blur-[18px]">
         <div className="mx-auto grid grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-2 md:flex md:justify-between md:gap-8 md:px-8 md:py-3 lg:px-12" style={{ maxWidth: '1320px' }}>
           <a href="#top" className="col-start-2 justify-self-center md:flex-0">
-            <img src={LOGO_URL} alt="Oren Klaff" className="h-10 w-auto md:h-20" />
+            <img src={LOGO_URL} alt="Oren Klaff" className="h-16 w-auto md:h-28" />
           </a>
-
-          {/* Desktop nav */}
-          <nav className="hidden items-center justify-center gap-6 text-xs font-semibold uppercase tracking-wider text-text/72 md:flex">
-            <a href="#proof" onClick={() => scrollTo('proof')} className="hover:text-text transition-colors">
-              Proof
-            </a>
-            <a href="#value" onClick={() => scrollTo('value')} className="hover:text-text transition-colors">
-              What You'll Learn
-            </a>
-            <a href="#approach" onClick={() => scrollTo('approach')} className="hover:text-text transition-colors">
-              Approach
-            </a>
-          </nav>
 
           {/* CTA Button */}
           <button
@@ -83,7 +62,7 @@ export default function Index() {
         </div>
       </header>
 
-      <main>
+      <main id="top">
         {/* Hero Section */}
         <section
           className="relative overflow-hidden bg-ink py-10 md:py-14 lg:py-16"
@@ -113,29 +92,29 @@ export default function Index() {
             }} />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
+          <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-stretch lg:gap-10">
               {/* Copy side */}
-              <div className="flex h-full min-h-0 flex-col justify-center gap-5 lg:min-h-full lg:gap-6">
+              <div className="flex h-full min-h-0 flex-col justify-start gap-5 lg:min-h-full lg:gap-6">
                 <div className="flex flex-col gap-4 lg:gap-5">
                 {/* Kicker */}
-                <div className="flex flex-wrap items-center gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
-                  <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
-                    Live webinar · Tuesday, July 2 at 9:00 AM PST
+                <div className="flex flex-col gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
+                      Live webinar · Thursday, June 4 at 12:00 noon PT
+                    </p>
+                    <span className="rounded-full border border-gold-2/42 bg-gradient-to-br from-gold-2/18 to-gold/6 px-2.5 py-1.5 text-xs font-black uppercase tracking-wider text-text/78 shadow-inner">
+                      No replay
+                    </span>
+                  </div>
+                  <p className="text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem]">
+                    What's "AFTER" OK Stone? NEW DEALS, NEW IDEAS:
                   </p>
-                  <span className="rounded-full border border-gold-2/42 bg-gradient-to-br from-gold-2/18 to-gold/6 px-2.5 py-1.5 text-xs font-black uppercase tracking-wider text-text/78 shadow-inner">
-                    No replay
-                  </span>
                 </div>
 
                 {/* Headline */}
-                <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
-                  FOR OK STONE INVESTORS - ALL NEW PRESENTATION
-                </p>
                 <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
-                  <span className="block">Go beyond <span className="whitespace-nowrap">"Game of Money"</span></span>
-                  <span className="block">to FINDING WINNERS.</span>
-                  <span className="block">Be the first to see it.</span>
+                  <span className="block" style={{ fontSize: '25px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span>&nbsp;- now introducing FINDING WINNERS</span>
                 </h1>
 
                 {/* Lede */}
@@ -144,8 +123,8 @@ export default function Index() {
                     className="hero-lede-glow pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 sm:-inset-x-6 sm:-inset-y-4"
                     aria-hidden
                   />
-                  <p className="relative text-xl font-semibold leading-[1.35] tracking-tight text-gold-2 sm:text-2xl md:text-[1.7rem] lg:text-[1.95rem]">
-                    By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight. This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
+                  <p className="relative text-sm leading-[1] tracking-tight text-gold-2" style={{ fontSize: '25px' }}>
+                    By the time you hear about most tech companies, the deal's already done — the early money got in cheap and you're being offered the same thing at full freight.&nbsp;
                   </p>
                 </div>
 
@@ -182,7 +161,7 @@ export default function Index() {
               </div>
 
               {/* Video & Form side */}
-              <aside className="flex h-full min-h-0 flex-col gap-4 lg:min-h-full" data-scroll-reveal data-scroll-reveal-delay="120">
+              <aside className="flex h-full min-h-0 flex-col justify-start gap-4 lg:min-h-full items-center lg:items-stretch" data-scroll-reveal data-scroll-reveal-delay="120">
                 {/* Video card */}
                 <div className="shrink-0 overflow-hidden rounded-lg border border-white/14 bg-white/5 shadow-2xl backdrop-blur">
                   <div className="relative aspect-video overflow-hidden bg-black">
@@ -238,7 +217,7 @@ export default function Index() {
                   Inside the session
                 </span>
                 <h2 className="serif mt-2 text-2xl font-semibold leading-tight text-text md:text-3xl">
-                  What we'll cover
+                  What we'll cover:&nbsp;This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
                 </h2>
                 <ul className="mt-5 grid gap-3 md:grid-cols-3 md:gap-5">
                   <li className="relative pl-6 text-sm leading-relaxed text-text/72 md:text-base">
@@ -278,7 +257,7 @@ export default function Index() {
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4" data-scroll-reveal="stagger">
               {[
-                { value: '$5B rev', label: 'Private-company with real revenues' },
+                { value: 'THE DEAL: $5B rev', label: 'Private-company with real revenues' },
                 { value: '$20B+', label: 'Capital raised through relationships' },
                 { value: 'A+', label: 'Management Team' },
                 { value: '60%+', label: 'YoY Growth' },
@@ -287,7 +266,7 @@ export default function Index() {
                   <CountUpMetric
                     value={metric.value}
                     delay={i * 120}
-                    className="serif block text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight font-variant-numeric tabular-nums"
+                    className="serif block text-[30px] font-semibold text-text leading-tight font-variant-numeric tabular-nums"
                   />
                   <p className="mt-2 text-xs md:text-sm font-bold text-text/58">
                     {metric.label}
@@ -307,7 +286,7 @@ export default function Index() {
                   A few things we'll touch
                 </p>
                 <h2 className="serif mt-4 max-w-2xl text-4xl md:text-5xl lg:text-6xl font-semibold text-dark-text leading-tight">
-                  This is how I share my work with 400+ current investors&nbsp;
+                  LIVE PRESENTATION: This is how I share my work with 400+ current investors&nbsp;
                 </h2>
               </div>
             </div>
@@ -326,7 +305,7 @@ export default function Index() {
                 },
                 {
                   num: '03',
-                  title: 'How Much to Invest',
+                  title: 'PRICING',
                   desc: 'How I price risk, time entries, and project exit.',
                 },
                 {
