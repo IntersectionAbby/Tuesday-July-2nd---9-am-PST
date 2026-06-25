@@ -119,19 +119,21 @@ export default function Index() {
               <div className="flex h-full min-h-0 flex-col justify-start gap-5 lg:min-h-full lg:gap-6">
                 <div className="flex flex-col gap-4 lg:gap-5">
                 {/* Kicker */}
-                <div className="flex flex-wrap items-center gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
-                  <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
-                    Live webinar · Tuesday, July 2 at 9:00 AM PST
+                <div className="flex flex-col gap-2.5" data-scroll-reveal data-scroll-reveal-delay="0">
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <p className="text-xs font-bold uppercase tracking-widest text-gold-2">
+                      Live webinar · Tuesday, July 2 at 9:00 AM PST
+                    </p>
+                    <span className="rounded-full border border-gold-2/42 bg-gradient-to-br from-gold-2/18 to-gold/6 px-2.5 py-1.5 text-xs font-black uppercase tracking-wider text-text/78 shadow-inner">
+                      No replay
+                    </span>
+                  </div>
+                  <p className="text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem]">
+                    FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                   </p>
-                  <span className="rounded-full border border-gold-2/42 bg-gradient-to-br from-gold-2/18 to-gold/6 px-2.5 py-1.5 text-xs font-black uppercase tracking-wider text-text/78 shadow-inner">
-                    No replay
-                  </span>
                 </div>
 
                 {/* Headline */}
-                <p className="mb-2 text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
-                  FOR OK STONE INVESTORS - ALL NEW PRESENTATION
-                </p>
                 <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
                   <span className="block" style={{ fontSize: '48px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span></span>
                   <span className="block" style={{ fontSize: '48px' }}>to FINDING WINNERS.</span>
