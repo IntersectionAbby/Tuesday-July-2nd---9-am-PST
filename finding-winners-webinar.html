@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <title>Finding Winners: How I Built a $120M Position | Intersection Capital</title>
@@ -90,7 +90,7 @@ margin: 0 auto;
 position: sticky;
 top: 0;
 z-index: 50;
-overflow: visible;
+overflow: hidden;
 border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 background: rgba(7, 9, 12, 0.92);
 box-shadow: 0 18px 70px rgba(0, 0, 0, 0.3);
@@ -123,7 +123,7 @@ position: absolute;
 z-index: 2;
 top: 50%;
 left: 50%;
-grid-column: 2;
+grid-column: 1 / -1;
 display: flex;
 align-items: center;
 justify-self: center;
@@ -133,7 +133,7 @@ line-height: 0;
 transform: translate(-50%, -50%);
 }
 .brand img {
-width: 720px;
+width: min(420px, 92vw);
 max-width: none;
 height: auto;
 }
@@ -166,6 +166,49 @@ gap: 16px;
 padding: 12px 20px;
 font-size: 13px;
 letter-spacing: 0.18em;
+}
+}
+@media (min-width: 768px) {
+:root {
+--header-h: 144px;
+}
+.header-inner {
+width: min(100% - 48px, 1320px);
+}
+.brand img {
+width: 520px;
+max-width: 56vw;
+}
+.hero {
+padding: 56px 0;
+}
+}
+@media (min-width: 1024px) {
+:root {
+--header-h: 164px;
+}
+.header-inner {
+width: min(100% - 64px, 1320px);
+}
+.brand img {
+width: 620px;
+max-width: 56vw;
+}
+.hero {
+padding: 64px 0;
+}
+.register-panel-wide {
+margin-right: 48px;
+margin-left: 48px;
+}
+}
+@media (min-width: 1280px) {
+:root {
+--header-h: 188px;
+}
+.brand img {
+width: 720px;
+max-width: none;
 }
 }
 .desktop-nav strong {
@@ -256,8 +299,8 @@ color: var(--text);
 border-color: var(--ink);
 }
 .btn-large {
-min-height: 52px;
-padding: 12px 20px;
+min-height: 60px;
+padding: 16px 24px;
 font-size: 16px;
 }
 .section-dark {
@@ -278,7 +321,7 @@ padding: clamp(88px, 10vw, 148px) 0;
 .hero {
 position: relative;
 isolation: isolate;
-padding: clamp(48px, 6vw, 80px) 0;
+padding: 40px 0;
 overflow: hidden;
 }
 .hero-bg {
@@ -929,7 +972,7 @@ margin-top: 16px;
 justify-content: center;
 }
 .hero-cta--under-video .btn {
-flex: 1 1 13rem;
+flex: 1 1 11.5rem;
 }
 .invite-note {
 display: grid;
@@ -1999,6 +2042,9 @@ grid-template-columns: 1fr;
 }
 .hero-grid--redesign {
 grid-template-columns: 1fr;
+display: flex;
+flex-direction: column;
+align-items: stretch;
 }
 .hero-form-panel {
 position: static;
@@ -2012,6 +2058,17 @@ grid-template-columns: 1fr;
 .hero-copy {
 grid-column: 1;
 order: 1;
+}
+.hero-copy--redesign {
+width: 100%;
+max-width: none;
+min-height: 0;
+justify-content: flex-start;
+}
+.hero-video-panel {
+position: static;
+order: 2;
+width: 100%;
 }
 .registration-panel {
 position: static;
@@ -2172,12 +2229,12 @@ display: grid;
 grid-template-columns: 1fr auto 1fr;
 align-items: center;
 gap: 12px;
-width: min(100% - 24px, 1320px);
+width: 100%;
 max-width: 1320px;
-padding: 0;
+padding: 0 16px;
 }
 .brand {
-grid-column: 2;
+grid-column: 1 / -1;
 justify-self: center;
 }
 .brand img {
@@ -2209,19 +2266,19 @@ font-size: 2rem;
 }
 .hero {
 min-height: auto;
-padding: 38px 0 42px;
+padding: 40px 0;
 }
 .hero-grid {
 gap: 28px;
 }
 .hero-grid--redesign {
-gap: 28px;
+gap: 32px;
 }
 .hero-copy {
 gap: 18px;
 }
 .hero-copy--redesign {
-gap: 20px;
+gap: 22px;
 padding-top: 0;
 }
 .hero-pill-row {
@@ -2280,6 +2337,20 @@ line-height: 0.98;
 letter-spacing: -0.015em;
 max-width: 100%;
 }
+.hero h1 .title-line-nowrap {
+display: block;
+white-space: normal;
+}
+.hero-lede--redesign {
+display: block;
+max-width: 100%;
+margin-top: 0;
+position: relative;
+z-index: 1;
+}
+.hero-video-panel {
+margin-top: 0;
+}
 .hero-lede-wrap {
 margin-top: 2px;
 }
@@ -2289,24 +2360,26 @@ font-size: clamp(1.05rem, 4.8vw, 1.22rem);
 line-height: 1.48;
 }
 .hero-cta {
-display: block;
-grid-template-columns: none;
-gap: 8px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
 }
 .hero-cta:not(.hero-cta--under-video) .btn-primary {
 display: none;
 }
 .hero-cta--under-video {
-display: grid;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 .hero-cta--under-video .btn-primary {
 display: inline-flex;
 }
 .hero-cta .btn {
-width: 100%;
-min-height: 44px;
-padding: 11px 10px;
-font-size: 13px;
+flex: 1 1 11.5rem;
+min-height: 58px;
+padding: 16px 20px;
+font-size: 16px;
 }
 .invite-note {
 padding: 16px 14px;
@@ -2469,7 +2542,7 @@ font-size: 13px;
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero section-dark" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true">
         <div class="market-grid"></div>

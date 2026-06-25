@@ -68,6 +68,7 @@ margin: 0 auto;
 position: sticky;
 top: 0;
 z-index: 50;
+overflow: hidden;
 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 background: rgba(8, 11, 15, 0.82);
 backdrop-filter: blur(18px);
@@ -550,7 +551,7 @@ margin-top: 16px;
 justify-content: center;
 }
 .hero-cta--under-video .btn {
-flex: 1 1 13rem;
+flex: 1 1 11.5rem;
 }
 .invite-note {
 display: grid;
@@ -1649,12 +1650,29 @@ display: none;
 .hero-grid {
 grid-template-columns: 1fr;
 }
+.hero-grid--redesign {
+display: flex;
+flex-direction: column;
+align-items: stretch;
+grid-template-columns: 1fr;
+}
 .hero-register-card {
 grid-template-columns: 1fr;
 }
 .hero-copy {
 grid-column: 1;
 order: 1;
+}
+.hero-copy--redesign {
+width: 100%;
+max-width: none;
+min-height: 0;
+justify-content: flex-start;
+}
+.hero-video-panel {
+position: static;
+order: 2;
+width: 100%;
 }
 .registration-panel {
 position: static;
@@ -1843,8 +1861,15 @@ padding: 34px 0 38px;
 .hero-grid {
 gap: 24px;
 }
+.hero-grid--redesign {
+gap: 32px;
+}
 .hero-copy {
 gap: 14px;
+}
+.hero-copy--redesign {
+gap: 22px;
+padding-top: 0;
 }
 .hero-kicker-row {
 gap: 8px;
@@ -1866,6 +1891,20 @@ font-size: 25px;
 line-height: 1.08;
 letter-spacing: -0.015em;
 max-width: 100%;
+}
+.hero h1 .title-line-nowrap {
+display: block;
+white-space: normal;
+}
+.hero-lede--redesign {
+display: block;
+max-width: 100%;
+margin-top: 0;
+position: relative;
+z-index: 1;
+}
+.hero-video-panel {
+margin-top: 0;
 }
 .hero-lede-wrap {
 margin-top: 2px;

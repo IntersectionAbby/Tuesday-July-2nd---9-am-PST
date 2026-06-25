@@ -46,7 +46,7 @@ export default function Index() {
     <div className="min-h-screen bg-ink overflow-x-hidden">
 
       {/* Header */}
-      <header className="sticky top-0 z-40 overflow-visible border-b border-white/10 bg-[#07090c]/92 shadow-[0_18px_70px_rgba(0,0,0,0.30)] backdrop-blur-2xl">
+      <header className="sticky top-0 z-40 overflow-hidden border-b border-white/10 bg-[#07090c]/92 shadow-[0_18px_70px_rgba(0,0,0,0.30)] backdrop-blur-2xl">
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-2/40 to-transparent" aria-hidden />
         <div className="relative mx-auto grid min-h-[116px] w-full max-w-[1320px] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-0 md:min-h-[144px] md:px-6 lg:min-h-[164px] lg:px-8 xl:min-h-[188px]">
           <a href="#top" className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 justify-self-center leading-none" aria-label="Oren Klaff home">
@@ -141,13 +141,13 @@ export default function Index() {
                 <div className="mt-4 flex flex-wrap justify-center gap-3" data-scroll-reveal data-scroll-reveal-delay="240">
                   <button
                     onClick={() => scrollTo('register')}
-                    className="inline-flex flex-1 basis-[13rem] items-center justify-center rounded-md bg-gold-2 px-6 py-4 text-base font-extrabold text-white shadow-[0_18px_48px_rgba(176,138,74,0.24)] transition-all hover:-translate-y-0.5 hover:bg-[#C09A56]"
+                    className="inline-flex flex-1 basis-[11.5rem] items-center justify-center rounded-md bg-gold-2 px-6 py-4 text-base font-extrabold text-white shadow-[0_18px_48px_rgba(176,138,74,0.24)] transition-all hover:-translate-y-0.5 hover:bg-[#C09A56]"
                   >
                     Reserve Your Seat
                   </button>
                   <button
                     onClick={() => scrollTo('value')}
-                    className="inline-flex flex-1 basis-[13rem] items-center justify-center rounded-md border border-white/16 bg-white/[0.035] px-6 py-4 text-base font-bold text-text transition-all hover:border-gold-2/42 hover:bg-white/8"
+                    className="inline-flex flex-1 basis-[11.5rem] items-center justify-center rounded-md border border-white/16 bg-white/[0.035] px-6 py-4 text-base font-bold text-text transition-all hover:border-gold-2/42 hover:bg-white/8"
                   >
                     What You'll Learn
                   </button>
