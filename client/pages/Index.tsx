@@ -161,8 +161,7 @@ export default function Index() {
         <section id="register" className="relative overflow-hidden border-y border-white/10 bg-[#080b0f] py-10 md:py-14">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-2/50 to-transparent" aria-hidden />
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
-            <div className="relative overflow-hidden rounded-lg border border-white/14 bg-white/[0.035] p-4 shadow-[0_30px_90px_rgba(0,0,0,0.28),0_0_70px_rgba(176,138,74,0.08)] backdrop-blur-xl md:p-6">
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-2/70 to-transparent" aria-hidden />
+            <div className="relative overflow-hidden p-0">
               <div className="min-h-[434px] overflow-hidden">
                 <HubSpotFormFrame className="h-full min-h-[434px]" />
               </div>
