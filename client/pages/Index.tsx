@@ -133,9 +133,9 @@ export default function Index() {
                   FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
                 <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
-                  <span className="block" style={{ fontSize: '36px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span></span>
-                  <span className="block" style={{ fontSize: '36px' }}>to FINDING WINNERS.</span>
-                  <span className="block" style={{ fontSize: '36px' }}>Be the first to see it.</span>
+                  <span className="block" style={{ fontSize: '48px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span></span>
+                  <span className="block" style={{ fontSize: '48px' }}>to FINDING WINNERS.</span>
+                  <span className="block" style={{ fontSize: '48px' }}>Be the first to see it.</span>
                 </h1>
 
                 {/* Lede */}
