@@ -17,26 +17,26 @@
     --muted: 205 10% 68%;
     --dark-text: 210 8% 7%;
     --dark-muted: 210 10% 41%;
-    --gold: 39 63% 62%;
-    --gold-2: 39 85% 68%;
+    --gold: 38 41% 49%;
+    --gold-2: 38 41% 49%;
     --emerald: 168 76% 42%;
     --blue: 210 24% 40%;
 
     --background: 210 8% 5%;
     --foreground: 38 11% 98%;
-    --primary: 39 63% 62%;
-    --primary-foreground: 210 8% 5%;
+    --primary: 38 41% 49%;
+    --primary-foreground: 38 11% 98%;
     --secondary: 38 11% 98%;
     --secondary-foreground: 210 8% 5%;
     --muted: 205 10% 68%;
     --muted-foreground: 210 10% 41%;
-    --accent: 39 63% 62%;
-    --accent-foreground: 210 8% 5%;
+    --accent: 38 41% 49%;
+    --accent-foreground: 38 11% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 210 5% 10%;
     --input: 210 5% 10%;
-    --ring: 39 63% 62%;
+    --ring: 38 41% 49%;
     --radius: 0.5rem;
   }
 
@@ -165,8 +165,8 @@
     border-radius: 1.25rem;
     background: radial-gradient(
       ellipse 88% 85% at 8% 50%,
-      rgba(234, 215, 173, 0.34) 0%,
-      rgba(198, 163, 106, 0.16) 44%,
+      rgba(176, 138, 74, 0.34) 0%,
+      rgba(176, 138, 74, 0.16) 44%,
       transparent 72%
     );
     filter: blur(20px);
@@ -186,7 +186,7 @@
     right: 8%;
     width: min(58vw, 560px);
     height: min(58vw, 560px);
-    background: radial-gradient(circle, rgba(234, 215, 173, 0.55) 0%, rgba(198, 163, 106, 0.2) 42%, transparent 72%);
+    background: radial-gradient(circle, rgba(176, 138, 74, 0.55) 0%, rgba(176, 138, 74, 0.2) 42%, transparent 72%);
     animation: heroGlowPulse 9s ease-in-out infinite;
   }
 
@@ -295,8 +295,8 @@
     padding: 12px 20px;
     border: 0;
     border-radius: 6px;
-    background: linear-gradient(135deg, #ead7ad, #c6a36a);
-    color: #11100c;
+    background: linear-gradient(135deg, #B08A4A, #B08A4A);
+    color: #ffffff;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;

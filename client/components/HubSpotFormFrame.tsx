@@ -10,8 +10,8 @@ export default function HubSpotFormFrame({
   return (
     <iframe
       className={`hs-form-frame min-h-[154px] ${className}`.trim()}
-      src="https://api.leadconnectorhq.com/widget/form/q1t9YHGh4x3jWhiFitgN?v=white-fields"
-      style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px', background: '#000', color: '#fff', colorScheme: 'dark' }}
+      src="https://api.leadconnectorhq.com/widget/form/q1t9YHGh4x3jWhiFitgN"
+      style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px', background: 'transparent' }}
       id={iframeId}
       data-layout="{'id':'INLINE'}"
       data-trigger-type="alwaysShow"
