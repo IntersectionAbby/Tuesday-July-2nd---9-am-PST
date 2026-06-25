@@ -129,14 +129,14 @@ export default function Index() {
                     </span>
                   </div>
                   <p className="text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem]">
-                    FOR OK STONE INVESTORS - ALL NEW PRESENTATION
+                    What's "AFTER" OK Stone? NEW DEALS, NEW IDEAS:
                   </p>
                 </div>
 
                 {/* Headline */}
                 <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
-                  <span className="block" style={{ fontSize: '48px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span></span>
-                  <span className="block" style={{ fontSize: '48px' }}>to FINDING WINNERS.</span>
+                  <span className="block" style={{ fontSize: '25px' }}>Go beyond <span className="whitespace-nowrap">"Game of Money"</span>&nbsp;- introducing FINDING WINNERS</span>
+                  <span className="block" style={{ fontSize: '28px' }}>Be the first to see it.</span>
                   <span className="block" style={{ fontSize: '48px' }}>Be the first to see it.</span>
                 </h1>
 
