@@ -52,13 +52,6 @@ export default function Index() {
             <img src={LOGO_URL} alt="Oren Klaff" className="h-16 w-auto md:h-28" />
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden items-center justify-center gap-3 text-xs font-semibold uppercase tracking-wider text-text/72 md:flex">
-            <p className="text-gold-2">
-              Live webinar · Thursday, June 4 at 12:00 noon PT
-            </p>
-          </nav>
-
           {/* CTA Button */}
           <button
             onClick={() => scrollTo('register')}
