@@ -57,7 +57,7 @@ export default function Index() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/82 backdrop-blur-[18px]">
         <div className="mx-auto grid grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-2 md:flex md:justify-between md:gap-8 md:px-8 md:py-3 lg:px-12" style={{ maxWidth: '1320px' }}>
           <a href="#top" className="col-start-2 justify-self-center md:flex-0">
-            <img src={LOGO_URL} alt="Oren Klaff" className="h-10 w-auto md:h-20" />
+            <img src={LOGO_URL} alt="Oren Klaff" className="h-16 w-auto md:h-28" />
           </a>
 
           {/* Desktop nav */}
