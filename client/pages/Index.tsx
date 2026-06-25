@@ -238,7 +238,7 @@ export default function Index() {
                   Inside the session
                 </span>
                 <h2 className="serif mt-2 text-2xl font-semibold leading-tight text-text md:text-3xl">
-                  What we'll cover
+                  What we'll cover:&nbsp;This is the breakdown of one real deal on the front pages NOW: how it got spotted early, what the first signal was, and the no-frills way to catch it before everyone else. Walked through live.&nbsp; No replay.
                 </h2>
                 <ul className="mt-5 grid gap-3 md:grid-cols-3 md:gap-5">
                   <li className="relative pl-6 text-sm leading-relaxed text-text/72 md:text-base">
@@ -278,7 +278,7 @@ export default function Index() {
           <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4" data-scroll-reveal="stagger">
               {[
-                { value: '$5B rev', label: 'Private-company with real revenues' },
+                { value: 'THE DEAL: $5B rev', label: 'Private-company with real revenues' },
                 { value: '$20B+', label: 'Capital raised through relationships' },
                 { value: 'A+', label: 'Management Team' },
                 { value: '60%+', label: 'YoY Growth' },
@@ -287,7 +287,7 @@ export default function Index() {
                   <CountUpMetric
                     value={metric.value}
                     delay={i * 120}
-                    className="serif block text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight font-variant-numeric tabular-nums"
+                    className="serif block text-[30px] font-semibold text-text leading-tight font-variant-numeric tabular-nums"
                   />
                   <p className="mt-2 text-xs md:text-sm font-bold text-text/58">
                     {metric.label}
@@ -307,7 +307,7 @@ export default function Index() {
                   A few things we'll touch
                 </p>
                 <h2 className="serif mt-4 max-w-2xl text-4xl md:text-5xl lg:text-6xl font-semibold text-dark-text leading-tight">
-                  This is how I share my work with 400+ current investors&nbsp;
+                  LIVE PRESENTATION: This is how I share my work with 400+ current investors&nbsp;
                 </h2>
               </div>
             </div>
@@ -326,7 +326,7 @@ export default function Index() {
                 },
                 {
                   num: '03',
-                  title: 'How Much to Invest',
+                  title: 'PRICING',
                   desc: 'How I price risk, time entries, and project exit.',
                 },
                 {
