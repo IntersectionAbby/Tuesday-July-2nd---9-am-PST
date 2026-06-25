@@ -6,9 +6,9 @@ import { useHubSpotFormScript } from '@/hooks/use-hubspot-form-script';
 import HubSpotFormFrame from '@/components/HubSpotFormFrame';
 import CountUpMetric from '@/components/CountUpMetric';
 
-const LOGO_URL = '/oren-logo.png';
+const LOGO_URL = 'https://assets.cdn.filesafe.space/WZTY4UMXmenzef3d9OQF/media/6a3c6d466a414441907cae15.png';
 const SPEAKER_IMAGE =
-  'https://50180818.fs1.hubspotusercontent-na2.net/hubfs/50180818/Oren%20-%20Headshots/L1010305-2.jpg';
+  'https://assets.cdn.filesafe.space/WZTY4UMXmenzef3d9OQF/media/6a3c6dceae7d476839552805.png';
 const VIMEO_EMBED_URL =
   'https://player.vimeo.com/video/1195793478?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1';
 
@@ -55,9 +55,9 @@ export default function Index() {
 
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/82 backdrop-blur-[18px]">
-        <div className="mx-auto flex items-center justify-between gap-8 px-6 py-3 md:px-8 lg:px-12" style={{ maxWidth: '1320px' }}>
-          <a href="#top" className="flex-0">
-            <img src={LOGO_URL} alt="Oren Klaff" className="h-14 w-auto sm:h-16 md:h-20" />
+        <div className="mx-auto grid grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-2 md:flex md:justify-between md:gap-8 md:px-8 md:py-3 lg:px-12" style={{ maxWidth: '1320px' }}>
+          <a href="#top" className="col-start-2 justify-self-center md:flex-0">
+            <img src={LOGO_URL} alt="Oren Klaff" className="h-10 w-auto md:h-20" />
           </a>
 
           {/* Desktop nav */}
@@ -76,7 +76,7 @@ export default function Index() {
           {/* CTA Button */}
           <button
             onClick={() => scrollTo('register')}
-            className="flex-0 inline-flex items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-5 py-3 text-sm font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-1px]"
+            className="col-start-3 hidden justify-self-end md:flex md:flex-0 items-center justify-center gap-2.5 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-5 py-3 text-sm font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-1px]"
           >
             Reserve Your Seat
           </button>
@@ -132,8 +132,8 @@ export default function Index() {
                 <p className="mb-2 text-center text-sm font-bold uppercase tracking-[0.14em] text-text sm:text-[0.9375rem] md:mb-3" data-scroll-reveal data-scroll-reveal-delay="40">
                   FOR OK STONE INVESTORS - ALL NEW PRESENTATION
                 </p>
-                <h1 className="text-3xl font-bold text-text leading-[1.08] tracking-tight md:text-4xl lg:text-5xl xl:text-6xl" data-scroll-reveal data-scroll-reveal-delay="80">
-                  <span className="block">Go beyond "Game of Money"</span>
+                <h1 className="text-3xl font-bold text-text leading-[1.1] tracking-tight md:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.65rem]" data-scroll-reveal data-scroll-reveal-delay="80">
+                  <span className="block">Go beyond <span className="whitespace-nowrap">"Game of Money"</span></span>
                   <span className="block">to FINDING WINNERS.</span>
                   <span className="block">Be the first to see it.</span>
                 </h1>

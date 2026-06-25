@@ -261,7 +261,7 @@
   }
 
   .hs-form-frame .hs-form .hs-form-field > label {
-    color: rgba(247, 245, 239, 0.72);
+    color: #ffffff;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -276,8 +276,13 @@
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.06);
-    color: #f7f5ef;
+    color: #ffffff;
     font-size: 14px;
+  }
+
+  .hs-form-frame .hs-form .hs-input::placeholder,
+  .hs-form-frame .hs-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.72);
   }
 
   .hs-form-frame .hs-form .hs-button {

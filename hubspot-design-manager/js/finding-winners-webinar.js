@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var LOGO_URL = "/oren-logo.png";
+  var LOGO_URL = "https://assets.cdn.filesafe.space/WZTY4UMXmenzef3d9OQF/media/6a3c6d466a414441907cae15.png";
 
   /** LeadConnector form embed — handled by iframe + form_embed.js */
 
@@ -148,7 +148,10 @@
       var targetValue = node.getAttribute("data-count-up");
       if (!targetValue) return;
       var parsed = parseMetric(targetValue);
-      if (!parsed) return;
+      if (!parsed) {
+        node.textContent = targetValue;
+        return;
+      }
 
       if (prefersReduced) {
         node.textContent = targetValue;

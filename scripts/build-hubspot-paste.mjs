@@ -40,14 +40,9 @@ html = html
   .replace(
     '{{ require_js(get_asset_url("../js/finding-winners-webinar.js")) }}',
     `<script>\n${js}\n  </script>`,
-  );
-
-if (!html.includes("{{ standard_header_includes }}")) {
-  throw new Error("Missing {{ standard_header_includes }}");
-}
-if (!html.includes("{{ standard_footer_includes }}")) {
-  throw new Error("Missing {{ standard_footer_includes }}");
-}
+  )
+  .replace("{{ standard_header_includes }}", "")
+  .replace("{{ standard_footer_includes }}", "");
 
 const out = path.join(root, "finding-winners-webinar.html");
 fs.writeFileSync(out, html);
