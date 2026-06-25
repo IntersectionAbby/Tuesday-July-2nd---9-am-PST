@@ -131,12 +131,6 @@ export default function Index() {
                 {/* CTAs */}
                 <div className="flex flex-wrap gap-2.5" data-scroll-reveal data-scroll-reveal-delay="240">
                   <button
-                    onClick={() => scrollTo('register')}
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-gold-2 to-gold px-5 py-3 text-base font-bold text-ink shadow-lg hover:shadow-xl transition-all hover:translate-y-[-2px]"
-                  >
-                    Reserve Your Seat
-                  </button>
-                  <button
                     onClick={() => scrollTo('value')}
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/16 bg-white/5 px-5 py-3 text-base font-bold text-text hover:border-gold-2/42 hover:bg-white/8 transition-all"
                   >
