@@ -113,7 +113,7 @@ export default function Index() {
             }} />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
+          <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-stretch lg:gap-10">
               {/* Copy side */}
               <div className="flex h-full min-h-0 flex-col justify-center gap-5 lg:min-h-full lg:gap-6">
