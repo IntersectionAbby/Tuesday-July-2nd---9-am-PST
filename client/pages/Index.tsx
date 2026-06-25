@@ -182,7 +182,7 @@ export default function Index() {
               </div>
 
               {/* Video & Form side */}
-              <aside className="flex h-full min-h-0 flex-col gap-4 lg:min-h-full" data-scroll-reveal data-scroll-reveal-delay="120">
+              <aside className="flex h-full min-h-0 flex-col justify-start gap-4 lg:min-h-full items-center lg:items-stretch" data-scroll-reveal data-scroll-reveal-delay="120">
                 {/* Video card */}
                 <div className="shrink-0 overflow-hidden rounded-lg border border-white/14 bg-white/5 shadow-2xl backdrop-blur">
                   <div className="relative aspect-video overflow-hidden bg-black">
