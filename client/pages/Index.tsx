@@ -134,7 +134,7 @@ export default function Index() {
                       Finding Winners Webinar
                     </strong>
                     <p className="text-sm font-medium leading-relaxed text-text/62">
-                      Thursday, July 2nd · 9:00 AM PST.
+                      Thursday, July 30th · 9:00 AM PST.
                     </p>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function Index() {
                 <div className="flex flex-col justify-center gap-1.5 px-5 py-5 md:px-7">
                   <span className="text-[15px] font-black uppercase tracking-[0.16em] text-gold-2">Session</span>
                   <strong className="serif block text-lg leading-[1.05] text-dark-text sm:text-xl lg:text-2xl">
-                    Thursday, July 2nd · <span className="nowrap">9:00 AM PST</span>
+                    Thursday, July 30th · <span className="nowrap">9:00 AM PST</span>
                   </strong>
                 </div>
               </div>
@@ -519,7 +519,7 @@ export default function Index() {
                   Be in the room while the analysis is still fresh.
                 </h2>
                 <p className="mt-4 text-base text-text/68 leading-relaxed">
-                  If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on Thursday, July 2nd at 9:00 AM PST.
+                  If this is the kind of private-market thinking you want to sharpen, reserve a seat and join the live session on Thursday, July 30th at 9:00 AM PST.
                 </p>
               </div>
               <button
@@ -573,7 +573,7 @@ export default function Index() {
                 Live webinar
               </span>
               <strong className="block text-sm text-text">
-                Thursday, July 2nd · <span className="nowrap">9:00 AM PST</span>
+                Thursday, July 30th · <span className="nowrap">9:00 AM PST</span>
               </strong>
             </div>
             <button

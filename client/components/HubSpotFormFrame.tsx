@@ -20,11 +20,11 @@ export default function HubSpotFormFrame({
       data-activation-value=""
       data-deactivation-type="neverDeactivate"
       data-deactivation-value=""
-      data-form-name="Thursday July 2nd Webinar Form"
+      data-form-name="Thursday July 30th Webinar Form"
       data-height="434"
       data-layout-iframe-id={iframeId}
       data-form-id="q1t9YHGh4x3jWhiFitgN"
-      title="Thursday July 2nd Webinar Form"
+      title="Thursday July 30th Webinar Form"
     />
   );
 }
